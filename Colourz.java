@@ -14,8 +14,9 @@ class ColorAdd {
         }
         System.out.println("Given colour Are:   ");
         for (int i = 0; i < size; i++) {
-            System.out.println(colour.get(i));
+            colour.get(i);
         }
+        System.out.println(colour);
     }
 
 }
