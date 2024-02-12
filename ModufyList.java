@@ -24,6 +24,7 @@ class ModifyList {
             if (position < 5) {
                 num.add(position, newNum);
             }
+            System.out.println(num);
         } catch (ArrayIndexOutOfBoundsException e1) {
             System.out.println(e1);
         }
@@ -32,5 +33,8 @@ class ModifyList {
 }
 
 public class ModufyList {
-
+    public static void main(String[] args) {
+        ModifyList ob=new ModifyList();
+        ob.Modification(5);
+    }
 }
