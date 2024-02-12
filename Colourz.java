@@ -8,8 +8,6 @@ class ColorAdd {
     void takingInput(int size) {
         Scanner sc = new Scanner(System.in);
         ArrayList<String> colour = new ArrayList<>();
-        System.out.println("How many Color wants to add in the File");
-        size = sc.nextInt();
         System.out.println("Please Enter the Name of the color");
         for (int i = 0; i < size; i++) {
             colour.add(sc.nextLine());
@@ -20,4 +18,10 @@ class ColorAdd {
         }
     }
 
+}
+public class Colourz{
+    public static void main(String[] args) {
+        ColorAdd ob=new ColorAdd();
+        ob.takingInput(5);
+    }
 }
