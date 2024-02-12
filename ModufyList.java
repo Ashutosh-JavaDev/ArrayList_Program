@@ -21,8 +21,10 @@ class ModifyList {
         System.out.println("Insert New Number wants to add in the List");
         int newNum = sc.nextInt();
         try {
-            if (position < 5) {
+            if (position >= 0 && position <= num.size()) { // Check if position is within bounds
                 num.add(position, newNum);
+            } else {
+                throw new ArrayIndexOutOfBoundsException("Invalid position");
             }
             System.out.println(num);
         } catch (ArrayIndexOutOfBoundsException e1) {
@@ -34,7 +36,7 @@ class ModifyList {
 
 public class ModufyList {
     public static void main(String[] args) {
-        ModifyList ob=new ModifyList();
+        ModifyList ob = new ModifyList();
         ob.Modification(5);
     }
 }
