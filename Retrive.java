@@ -1,5 +1,6 @@
 package ArrayList_Program;
 
+import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -15,9 +16,14 @@ class retrive {
         System.out.println("Please Enter the Index whose Element want to  find");
         int newNum = sc.nextInt();
         try {
-            
+            if (newNum < 5) {
+                System.out.println(num.get(newNum));
+            }
+            else{
+              throw new  ArrayIndexOutOfBoundsException("Invalid Position");
+            }
         } catch (ArrayIndexOutOfBoundsException e1) {
-
+            System.out.println(e1);
         }
 
     }
