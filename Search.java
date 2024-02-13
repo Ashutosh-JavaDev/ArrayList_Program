@@ -15,5 +15,8 @@ class srECH{
     }
 }
 public class Search {
-    
+    public static void main(String[] args) {
+        srECH ob=new srECH();
+        ob.valueContain();
+    }
 }
