@@ -11,7 +11,7 @@ class sHuffle{
             list.add(sc.nextLine());
         }
         Collections.shuffle(list);
-
+        System.out.println(list);
     }
 }
 public class Shuffle {
