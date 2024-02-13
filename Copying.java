@@ -15,7 +15,9 @@ class cOpying{
         for(int i=0;i<5;i++){
             list1.add(i);
         }
-        
+        Collections.copy(list, list1);
+        System.out.println(list);        
+        System.out.println(list1);
 
     }
 }
