@@ -10,7 +10,7 @@ class subLists{
         for(int i=0;i<5;i++){
             list.add(sc.nextInt());
         }
-        list.subList(0, 3);
+        ArrayList<Integer>sub_List=new  ArrayList<>(list.subList(0, 3));
         System.out.println(list);
     }
 }
