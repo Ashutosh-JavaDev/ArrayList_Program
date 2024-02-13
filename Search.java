@@ -10,7 +10,8 @@ class srECH{
         list.add(23);
         list.add(2.4f);
         list.add("Blue");
-        
+        Boolean answer=list.contains("Red");
+        System.out.println(answer);
     }
 }
 public class Search {
