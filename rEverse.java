@@ -16,5 +16,8 @@ class Reverse{
     }
 }
 public class rEverse {
-    
+    public static void main(String[] args) {
+        Reverse ob=new Reverse();
+        ob.reVerse();
+    }
 }
