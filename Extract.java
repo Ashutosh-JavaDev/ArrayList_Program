@@ -12,6 +12,11 @@ class subLists{
         }
         list.subList(0, 3);
         System.out.println(list);
-
+    }
+}
+public class Extract{
+    public static void main(String[] args) {
+        subLists ob=new subLists();
+        ob.Lists();
     }
 }
