@@ -10,7 +10,8 @@ class Reverse{
         for(int i=0;i<5;i++){
             list.add(sc.nextInt());
         }
-        
+        Collections.reverse(list);
+        System.out.println(list);
 
     }
 }
