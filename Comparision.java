@@ -15,7 +15,7 @@ class compared {
         ArrayList<String> lists2 = new ArrayList<>();
         System.out.println("Enter the VAlue in the Second Lists");
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 4; i++) {
             lists2.add(sc.nextLine());
         }
         ArrayList<String>c3=new ArrayList<>(); 
