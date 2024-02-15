@@ -18,6 +18,9 @@ class compared {
         for (int i = 0; i < 5; i++) {
             lists2.add(sc.nextLine());
         }
+        for (String value : lists) {
+
+        }
     }
 }
 
