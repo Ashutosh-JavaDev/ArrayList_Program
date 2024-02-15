@@ -12,7 +12,12 @@ class compared {
         for (int i = 0; i < 5; i++) {
             lists.add(sc.nextLine());
         }
-        ArrayList<String>lists2=new ArrayList<>();
+        ArrayList<String> lists2 = new ArrayList<>();
+        System.out.println("Enter the VAlue in the Second Lists");
+
+        for (int i = 0; i < 5; i++) {
+            lists2.add(sc.nextLine());
+        }
     }
 }
 
