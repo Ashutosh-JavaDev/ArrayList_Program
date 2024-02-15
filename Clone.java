@@ -10,10 +10,11 @@ class cLone {
         for (int i = 0; i < 5; i++) {
             list.add(sc.nextInt());
         }
-        // ArrayList<Integer>List3=(ArrayList<Integer>)list.clone();
-        ArrayList<Integer>list2=new ArrayList<>(list);
-        System.out.println(list2);
-        // list2.add(<Integer>.clone(list));
+        ArrayList<Integer>List3=(ArrayList<Integer>)list.clone();
+        System.out.println(List3);
+        // ArrayList<Integer>list2=new ArrayList<>(list);
+        // System.out.println(list2);
+        // // list2.add(<Integer>.clone(list));
     }
 }
 
