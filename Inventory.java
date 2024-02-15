@@ -21,7 +21,7 @@ class inventory {
                 int value = sc.nextInt();
                 try {
                     if (value < 5 && value >= 0) {
-                        for (int i = 0; i < 5; i++) {
+                        for (int i = 0; i < value; i++) {
                             System.out.println("Enter the Element wants to remove from the List");
                             int items = sc.nextInt();
                             list1.remove(items);
