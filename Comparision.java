@@ -19,11 +19,9 @@ class compared {
             lists2.add(sc.nextLine());
         }
         ArrayList<String>c3=new ArrayList<>(); 
-        for (String value : lists) {
+        for (String value : lists)
             c3.add(lists2.contains(value)?"Yes":"No");
-
             System.out.println(c3);
-        }
     }
 }
 
