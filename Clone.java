@@ -14,7 +14,6 @@ class cLone {
         System.out.println(List3);
         // ArrayList<Integer>list2=new ArrayList<>(list);
         // System.out.println(list2);
-        // // list2.add(<Integer>.clone(list));
     }
 }
 
