@@ -35,8 +35,13 @@ class inventory {
                     System.out.println(e1);
                 }
                 break;
+                case 2:
+                System.out.println("How Many New Items Want to Add in this Inventory");
+                int updateInv=sc.nextInt();
+                
         
             default:
+            System.out.println("Invalid Press");
                 break;
         }
     }
