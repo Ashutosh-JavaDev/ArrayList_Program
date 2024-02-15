@@ -10,12 +10,12 @@ class Join {
         for (int i = 0; i < 5; i++) {
             list.add(sc.nextInt());
         }
-        ArrayList<Integer>list2=new ArrayList<>();
+        ArrayList<Integer> list2 = new ArrayList<>();
         System.out.println("Enter the VAlue in  the Second ArrayList");
-        for(int i=0;i<5;i++){
+        for (int i = 0; i < 5; i++) {
             list2.add(sc.nextInt());
         }
-        ArrayList<Integer>list3=new ArrayList<>();
+        ArrayList<Integer> list3 = new ArrayList<>();
         list3.addAll(list);
         list3.addAll(list2);
         System.out.println(list3);
@@ -24,5 +24,8 @@ class Join {
 }
 
 public class Joining {
-
+    public static void main(String[] args) {
+        Join ob=new Join();
+        ob.joinning();
+    }
 }
