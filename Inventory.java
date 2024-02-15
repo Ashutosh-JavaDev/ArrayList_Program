@@ -46,6 +46,7 @@ class inventory {
                 list3.addAll(list1);
                 list3.addAll(list2);
                 System.out.println("Updated List:   "+list3);
+                break;
 
             default:
                 System.out.println("Invalid Press");
@@ -55,5 +56,8 @@ class inventory {
 }
 
 public class Inventory {
-
+    public static void main(String[] args) {
+        inventory ob=new inventory();
+        ob.invent();
+    }
 }
