@@ -13,5 +13,8 @@ class Swap{
     }
 }
 public class Swapping {
-    
+    public static void main(String[] args) {
+        Swap ob=new Swap();
+        ob.swapping();
+    }
 }
