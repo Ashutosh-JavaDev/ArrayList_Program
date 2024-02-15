@@ -10,11 +10,7 @@ class clone {
         for (int i = 0; i < 5; i++) {
             list.add(sc.nextInt());
         }
-        ArrayList<Integer> lists2 = new ArrayList<Integer>();
-        System.out.println("Enter the Value in the Second ArrayList");
-        for (int i = 0; i < 5; i++) {
-            list.add(sc.nextInt());
-        }
+        ArrayList<Integer>List3=(ArrayList<Integer>)list.clone();
     }
 }
 
