@@ -28,5 +28,8 @@ class compared {
 }
 
 public class Comparision {
-
+    public static void main(String[] args) {
+        compared ob=new compared();
+        ob.comparision();
+    }
 }
