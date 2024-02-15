@@ -39,7 +39,7 @@ class inventory {
                 System.out.println("How Many New Items Want to Add in this Inventory");
                 int updateInv = sc.nextInt();
                 System.out.println("Enter the Items Want to add in the Inventory");
-                for(int i=0;i<5;i++){
+                for(int i=0;i<updateInv;i++){
                     list2.add(sc.nextInt());
                 }
                 ArrayList<Integer>list3=new ArrayList<>();
