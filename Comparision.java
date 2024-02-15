@@ -12,6 +12,7 @@ class compared {
         for (int i = 0; i < 5; i++) {
             lists.add(sc.nextLine());
         }
+        ArrayList<String>lists2=new ArrayList<>();
     }
 }
 
