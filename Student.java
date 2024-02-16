@@ -148,8 +148,7 @@ class informational_Data {
                                         Course.remove(index);
                                     }
                                     sc.nextLine(); // Consume newline
-                                    System.out
-                                            .println("Enter the Course of the Student, whose Records wants to Delete:");
+                                    System.out.println("Enter the Course of the Student, whose Records wants to Delete:");
                                     String course = sc.nextLine();
                                     if (Course.contains(course)) {
                                         int index = Course.indexOf(course);
