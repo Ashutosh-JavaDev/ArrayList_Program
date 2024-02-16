@@ -4,7 +4,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 class informational_Data{
     void information(){
-        
+        Scanner sc=new Scanner(System.in);
+        ArrayList<String>Name=new ArrayList<>();
+        ArrayList<String>Age=new ArrayList<>();
+        ArrayList<Integer>Classes=new ArrayList<>();
+        System.out.println("How Many Student's Data Want to Insert in the Records ?");
+        int Records=sc.nextInt();
     }
 }
 public class Student {
