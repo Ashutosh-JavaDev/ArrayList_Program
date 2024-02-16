@@ -61,7 +61,11 @@ class inventory {
                         int elementtoRemove=sc.nextInt();
                         try{
                             if(elementtoRemove<list1.size()&&elementtoRemove>=0){
-                                
+                                for(int i=0;i<elementtoRemove;i++){
+                                    System.out.println("Enter the "+i+1+" element want to remove from the List");
+                                    int removeElement=sc.nextInt();
+
+                                }
                             }
                         }
                         break;
