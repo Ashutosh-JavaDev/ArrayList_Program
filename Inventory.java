@@ -70,7 +70,7 @@ class inventory {
                                     if (list1.contains(removeElement)) {
                                         list1.remove(String.valueOf(removeElement));
                                     } else {
-                                        System.out.println(removeElement + " Not Present in the List");
+                                        System.out.println(removeElement + " ,is Not Present in the List");
                                     }
                                 }
                                 System.out.println("List After Remove Items:   " + list1);
