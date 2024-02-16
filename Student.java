@@ -19,13 +19,18 @@ class informational_Data {
             Name.add(sc.nextLine());
             System.out.println("Age of " + (i + 1) + " - Student:");
             Age.add(sc.nextInt());
+            sc.nextLine();
             System.out.println("Course of " + (i + 1) + " - Student:");
             Course.add(sc.nextLine());
         }
         for (int i = 0; i < Records; i++) {
+            System.out.println("Data of "+(i+1)+" Student:");
             System.out.print("Name:   " + Name.get(i));
+            System.out.println();
             System.out.print("Age:   " + Age.get(i));
+            System.out.println();
             System.out.print("Course:   " + Course.get(i));
+            System.out.println();
 
         }
 
