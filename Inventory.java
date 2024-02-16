@@ -71,6 +71,7 @@ class inventory {
                                         System.out.println(removeElement+" Not Present in the List");
                                     }
                                 }
+                                System.out.println("Updated List:   "+list1);
                             }
                             else{
                                 throw new ArrayIndexOutOfBoundsException("Invalid Position");
