@@ -23,12 +23,11 @@ class inventory {
                     if (value < 5 && value >= 0) {
                         for (int i = 0; i < value; i++) {
                             System.out.println("Enter the Element wants to remove from the List");
-                            int items=sc.nextInt();
-                            if(list1.contains(items)){
+                            int items = sc.nextInt();
+                            if (list1.contains(items)) {
                                 list1.remove(Integer.valueOf(items));
-                            }
-                            else{
-                                System.out.println(items+" Not Present In the List");
+                            } else {
+                                System.out.println(items + " Not Present In the List");
                             }
                         }
                         System.out.println("Update List: " + list1);
@@ -53,6 +52,17 @@ class inventory {
                 System.out.println("Updated List:   " + list3);
                 break;
 
+                case 3:
+                System.out.println("Press 1: To Remove First then Add\nPress 2: To Add First then Remove");
+                int press=sc.nextInt();
+                switch (press) {
+                    case 1:
+                        
+                        break;
+                
+                    default:
+                        break;
+                }
             default:
                 System.out.println("Invalid Press");
                 break;
