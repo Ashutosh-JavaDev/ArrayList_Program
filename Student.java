@@ -111,15 +111,20 @@ class informational_Data {
                         try {
                             if (RemRecords < Records && RemRecords >= 0) {
                                 for (int i = 0; i < RemRecords; i++) {
-                                    System.out.println(
-                                            "Enter the Name, Age and Course of the Student, whose Records wants to Delete.");
+                                    System.out.println("Enter the Name of the Student, whose Records wants to Delete.");
                                     String name = sc.nextLine();
-                                    int age = sc.nextInt();
-                                    String course = sc.nextLine();
-                                    if (Name.contains(String.valueOf(name)) && Age.contains(String.valueOf(age))
-                                            && Course.contains(String.valueOf(course))) {
+                                    if (Name.contains(String.valueOf(name))) {
                                         Name.remove(name);
+                                    }
+                                    System.out.println("Enter the Age of the Student, whose Records wants to Delete.");
+                                    int age = sc.nextInt();
+                                    if (Age.contains(String.valueOf(age))) {
                                         Age.remove(age);
+                                    }
+                                    System.out
+                                            .println("Enter the Course of the Student, whose Records wants to Delete.");
+                                    String course = sc.nextLine();
+                                    if (Course.contains(String.valueOf(course))) {
                                         Course.remove(course);
                                     } else {
                                         System.out.println("Enter the Data Properly");
