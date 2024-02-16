@@ -65,20 +65,21 @@ class informational_Data {
                 break;
             case 2:
                 System.out.println("How Many Data Want to remove From the Records ?");
-                int remRecords=sc.nextInt();
-                try{
-                    if(remRecords<Records && remRecords>=0){
-                        for(int i=0;i<remRecords;i++){
-                            System.out.println("Enter the Name, Age and Course of the Student, whose Records wants to Delete.");
-                            String name=sc.nextLine();
-                            int age=sc.nextInt();
-                            String course=sc.nextLine();
-                            if(Name.contains(String.valueOf(name))&&Age.contains(String.valueOf(age))&&Course.contains(String.valueOf(course))){
+                int remRecords = sc.nextInt();
+                try {
+                    if (remRecords < Records && remRecords >= 0) {
+                        for (int i = 0; i < remRecords; i++) {
+                            System.out.println(
+                                    "Enter the Name, Age and Course of the Student, whose Records wants to Delete.");
+                            String name = sc.nextLine();
+                            int age = sc.nextInt();
+                            String course = sc.nextLine();
+                            if (Name.contains(String.valueOf(name)) && Age.contains(String.valueOf(age))
+                                    && Course.contains(String.valueOf(course))) {
                                 Name.remove(name);
                                 Age.remove(age);
                                 Course.remove(course);
-                            }
-                            else{
+                            } else {
                                 System.out.println("Enter the Data Properly");
                             }
                         }
@@ -92,14 +93,77 @@ class informational_Data {
                             System.out.print("Course:   " + Course.get(i));
                             System.out.println();
                         }
-                    }
-                    else{
+                    } else {
                         throw new ArrayIndexOutOfBoundsException("Invalid Position");
                     }
-                }
-                catch(ArrayIndexOutOfBoundsException e1){
+                } catch (ArrayIndexOutOfBoundsException e1) {
                     System.out.println(e1);
                 }
+                break;
+            case 3:
+                System.out.println(
+                        "Press 4:To Remove old Data then Add New Data");
+                int Press = sc.nextInt();
+                switch (Press) {
+                    case 4:
+                        System.out.println("How Many Data Want to remove From the Records ?");
+                        int RemRecords = sc.nextInt();
+                        try {
+                            if (RemRecords < Records && RemRecords >= 0) {
+                                for (int i = 0; i < RemRecords; i++) {
+                                    System.out.println(
+                                            "Enter the Name, Age and Course of the Student, whose Records wants to Delete.");
+                                    String name = sc.nextLine();
+                                    int age = sc.nextInt();
+                                    String course = sc.nextLine();
+                                    if (Name.contains(String.valueOf(name)) && Age.contains(String.valueOf(age))
+                                            && Course.contains(String.valueOf(course))) {
+                                        Name.remove(name);
+                                        Age.remove(age);
+                                        Course.remove(course);
+                                    } else {
+                                        System.out.println("Enter the Data Properly");
+                                    }
+                                }
+
+                            } else {
+                                throw new ArrayIndexOutOfBoundsException("Invalid Position");
+                            }
+                        } catch (ArrayIndexOutOfBoundsException e1) {
+                            System.out.println(e1);
+                        }
+
+                        System.out.println("How Many New Student's Information, You Want to add in the Records ?");
+                        int NewInformation = sc.nextInt();
+                        sc.nextLine();
+                        System.out.println("Enter the Data In the Records");
+                        for (int i = 0; i < NewInformation; i++) {
+                            System.out.println("Name of " + (i + 1) + " - Student:");
+                            Name.add(sc.nextLine());
+                            System.out.println("Age of " + (i + 1) + " - Student:");
+                            Age.add(sc.nextInt());
+                            sc.nextLine();
+                            System.out.println("Course of " + (i + 1) + " - Student:");
+                            Course.add(sc.nextLine());
+                        }
+                        System.out.println("Updated Records");
+                        for (int i = 0; i < Name.size(); i++) {
+                            System.out.println("Data of " + (i + 1) + " Student:");
+                            System.out.print("Name:   " + Name.get(i));
+                            System.out.println();
+                            System.out.print("Age:   " + Age.get(i));
+                            System.out.println();
+                            System.out.print("Course:   " + Course.get(i));
+                            System.out.println();
+                        }
+                        break;
+                    default:
+                        System.out.println("Press Valid Key");
+
+                }
+                break;
+            default:
+                System.out.println("Invalid Press");
         }
 
     }
