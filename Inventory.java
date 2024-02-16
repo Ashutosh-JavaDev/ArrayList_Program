@@ -19,14 +19,17 @@ class inventory {
             case 1:
                 System.out.println("How Many Data want to remove from the List");
                 int value = sc.nextInt();
-                ArrayList<Integer> items = new ArrayList<>();
-
                 try {
                     if (value < 5 && value >= 0) {
                         for (int i = 0; i < value; i++) {
                             System.out.println("Enter the Element wants to remove from the List");
-                            items.add(sc.nextInt());
-                            list1.remove(items);
+                            int items=sc.nextInt();
+                            if(list1.contains(items)){
+                                list1.remove(Integer.valueOf(items));
+                            }
+                            else{
+                                System.out.println("Element Not Present In the List");
+                            }
                         }
                         System.out.println("Update List: " + list1);
                     } else {
