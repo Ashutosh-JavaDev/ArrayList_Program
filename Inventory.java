@@ -57,7 +57,13 @@ class inventory {
                 int press=sc.nextInt();
                 switch (press) {
                     case 1:
-                        
+                        System.out.println("How Many Items Want to remove from the List");
+                        int elementtoRemove=sc.nextInt();
+                        try{
+                            if(elementtoRemove<list1.size()&&elementtoRemove>=0){
+                                
+                            }
+                        }
                         break;
                 
                     default:
