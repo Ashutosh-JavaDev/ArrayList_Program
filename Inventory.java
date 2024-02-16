@@ -23,7 +23,8 @@ class inventory {
                     if (value < 5 && value >= 0) {
                         for (int i = 0; i < value; i++) {
                             System.out.println("Enter the Element wants to remove from the List");
-                            int items = sc.nextInt();
+                            ArrayList<Integer> items = new ArrayList<>();
+                            items.add(sc.nextInt());
                             list1.remove(items);
                         }
                         System.out.println("Update List: " + list1);
@@ -39,13 +40,13 @@ class inventory {
                 System.out.println("How Many New Items Want to Add in this Inventory");
                 int updateInv = sc.nextInt();
                 System.out.println("Enter the Items Want to add in the Inventory");
-                for(int i=0;i<updateInv;i++){
+                for (int i = 0; i < updateInv; i++) {
                     list2.add(sc.nextInt());
                 }
-                ArrayList<Integer>list3=new ArrayList<>();
+                ArrayList<Integer> list3 = new ArrayList<>();
                 list3.addAll(list1);
                 list3.addAll(list2);
-                System.out.println("Updated List:   "+list3);
+                System.out.println("Updated List:   " + list3);
                 break;
 
             default:
@@ -57,7 +58,7 @@ class inventory {
 
 public class Inventory {
     public static void main(String[] args) {
-        inventory ob=new inventory();
+        inventory ob = new inventory();
         ob.invent();
     }
 }
