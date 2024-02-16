@@ -28,7 +28,7 @@ class inventory {
                                 list1.remove(Integer.valueOf(items));
                             }
                             else{
-                                System.out.println("Element Not Present In the List");
+                                System.out.println(items+" Not Present In the List");
                             }
                         }
                         System.out.println("Update List: " + list1);
