@@ -27,7 +27,7 @@ class inventory {
                             System.out.println("Enter the Element wants to remove from the List");
                             int items = sc.nextInt();
                             if (list1.contains(items)) {
-                                list1.remove(Integer.valueOf(items));
+                                list1.remove(String.valueOf(items));
                             } else {
                                 System.out.println(items + " Not Present In the List");
                             }
@@ -41,14 +41,14 @@ class inventory {
                 }
                 break;
             case 2:
-                ArrayList<Integer> list2 = new ArrayList<>();
+                ArrayList<String> list2 = new ArrayList<>();
                 System.out.println("How Many New Items Want to Add in this Inventory");
                 int updateInv = sc.nextInt();
                 System.out.println("Enter the Items Want to add in the Inventory");
                 for (int i = 0; i < updateInv; i++) {
-                    list2.add(sc.nextInt());
+                    list2.add(sc.nextLine());
                 }
-                ArrayList<Integer> list3 = new ArrayList<>();
+                ArrayList<String> list3 = new ArrayList<>();
                 list3.addAll(list1);
                 list3.addAll(list2);
                 System.out.println("Updated List:   " + list3);
@@ -82,12 +82,12 @@ class inventory {
                         // Update List
                         System.out.println("How Many new Element wants to add in the List");
                         int NewElement = sc.nextInt();
-                        ArrayList<Integer> list6 = new ArrayList<>();
+                        ArrayList<String> list6 = new ArrayList<>();
                         System.out.println("Enter the Element want to add in the List");
                         for (int i = 0; i < NewElement; i++) {
-                            list6.add(sc.nextInt());
+                            list6.add(sc.nextLine());
                         }
-                        ArrayList<Integer> list5 = new ArrayList<>();
+                        ArrayList<String> list5 = new ArrayList<>();
                         list5.addAll(list1);
                         list5.addAll(list6);
                         System.out.println("Updated List:   " + list5);
@@ -96,11 +96,11 @@ class inventory {
                     case 5:
                         System.out.println("How Many new Element wants to add in the List");
                         int newElement = sc.nextInt();
-                        ArrayList<Integer> list4 = new ArrayList<>();
+                        ArrayList<String> list4 = new ArrayList<>();
                         for (int i = 0; i < newElement; i++) {
-                            list4.add(sc.nextInt());
+                            list4.add(sc.nextLine());
                         }
-                        ArrayList<Integer> list7 = new ArrayList<>();
+                        ArrayList<String> list7 = new ArrayList<>();
                         list7.addAll(list1);
                         list7.addAll(list4);
                         System.out.println("Updated List:   " + list7);
