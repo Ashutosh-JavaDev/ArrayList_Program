@@ -6,11 +6,13 @@ import java.util.Collections;
 
 class inventory {
     void invent() {
-        ArrayList<Integer> list1 = new ArrayList<>();
+        ArrayList<String> list1 = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
+        System.out.println("How many Items You want to add in the Inventory?");
+        int itemsNumber=sc.nextInt();
         System.out.println("Enter the Items in the Inventory");
-        for (int i = 0; i < 5; i++) {
-            list1.add(sc.nextInt());
+        for (int i = 0; i < itemsNumber; i++) {
+            list1.add(sc.nextLine());
         }
         System.out.println(
                 "Press 1: To Remove Items from the Inventory\nPress 2: To Add New Items in the Inventory\nPress 3: To complete Both Task");
@@ -20,7 +22,7 @@ class inventory {
                 System.out.println("How Many Data want to remove from the List");
                 int value = sc.nextInt();
                 try {
-                    if (value < 5 && value >= 0) {
+                    if (value < itemsNumber && value >= 0) {
                         for (int i = 0; i < value; i++) {
                             System.out.println("Enter the Element wants to remove from the List");
                             int items = sc.nextInt();
