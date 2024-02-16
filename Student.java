@@ -33,6 +33,18 @@ class informational_Data {
             System.out.println();
 
         }
+        System.out.println("Press 1: To Add More Student's Data In the Records\nPress 2:To  Remove Some Data From the Records\nPress 3:To Do Both Task");
+        int press=sc.nextInt();
+        switch(press){
+            case 1:
+            System.out.println("How Many New Student's Information, You Want to add in the Records ?");
+            int newInformation=sc.nextInt();
+            for(int i=0;i<newInformation;i++){
+                Name.add(sc.nextLine());
+                Age.add(sc.nextInt());
+                Course.add(sc.nextLine());
+            }
+        }
 
     }
 }
