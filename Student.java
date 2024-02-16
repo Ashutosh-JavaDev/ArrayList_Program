@@ -64,31 +64,40 @@ class informational_Data {
                 }
                 break;
             case 2:
-                System.out.println("How Many Data Want to remove From the Records ?");
+                System.out.println("How Many Data Want to Remove from the Records?");
                 int remRecords = sc.nextInt();
                 try {
-                    if (remRecords < Records && remRecords >= 0) {
+                    if (remRecords <= Records && remRecords >= 0) { // Changed condition from "<" to "<="
+                        sc.nextLine(); // Consume newline
                         for (int i = 0; i < remRecords; i++) {
-                            System.out.println("Enter the Name of the Student, whose Records wants to Delete.");
+                            System.out.println("Enter the Name of the Student, whose Records wants to Delete:");
                             String name = sc.nextLine();
-                            sc.nextLine();
-                            if (Name.contains(String.valueOf(name))) {
-                                Name.remove(name);
+                            if (Name.contains(name)) {
+                                int index = Name.indexOf(name); // Find index of the name
+                                Name.remove(index); // Remove name at that index
+                                Age.remove(index); // Remove corresponding age
+                                Course.remove(index); // Remove corresponding course
                             }
-                            System.out.println("Enter the Age of the Student, whose Records wants to Delete.");
+                            // Same procedure for age and course
+                            System.out.println("Enter the Age of the Student, whose Records wants to Delete:");
                             int age = sc.nextInt();
-                            sc.nextLine();
-                            if (Age.contains(String.valueOf(age))) {
-                                Age.remove(age);
+                            if (Age.contains(age)) {
+                                int index = Age.indexOf(age);
+                                Name.remove(index);
+                                Age.remove(index);
+                                Course.remove(index);
                             }
-                            System.out
-                                    .println("Enter the Course of the Student, whose Records wants to Delete.");
+                            sc.nextLine(); // Consume newline
+                            System.out.println("Enter the Course of the Student, whose Records wants to Delete:");
                             String course = sc.nextLine();
-                            if (Course.contains(String.valueOf(course))) {
-                                Course.remove(course);
-                            } else {
-                                System.out.println("Enter the Data Properly");
+                            if (Course.contains(course)) {
+                                int index = Course.indexOf(course);
+                                Name.remove(index);
+                                Age.remove(index);
+                                Course.remove(index);
                             }
+                            // No need for else condition here as removing from Name, Age, and Course is
+                            // already handled above
                         }
 
                         System.out.println("Updated Records");
@@ -107,6 +116,7 @@ class informational_Data {
                 } catch (ArrayIndexOutOfBoundsException e1) {
                     System.out.println(e1);
                 }
+
                 break;
             case 3:
                 System.out.println(
@@ -115,30 +125,52 @@ class informational_Data {
                 switch (Press) {
                     case 4:
                         System.out.println("How Many Data Want to remove From the Records ?");
-                        int RemRecords = sc.nextInt();
+                        int reMRecords = sc.nextInt();
                         try {
-                            if (RemRecords < Records && RemRecords >= 0) {
-                                for (int i = 0; i < RemRecords; i++) {
-                                    System.out.println("Enter the Name of the Student, whose Records wants to Delete.");
+                            if (reMRecords <= Records && reMRecords >= 0) { // Changed condition from "<" to "<="
+                                sc.nextLine(); // Consume newline
+                                for (int i = 0; i < reMRecords; i++) {
+                                    System.out.println("Enter the Name of the Student, whose Records wants to Delete:");
                                     String name = sc.nextLine();
-                                    if (Name.contains(String.valueOf(name))) {
-                                        Name.remove(name);
+                                    if (Name.contains(name)) {
+                                        int index = Name.indexOf(name); // Find index of the name
+                                        Name.remove(index); // Remove name at that index
+                                        Age.remove(index); // Remove corresponding age
+                                        Course.remove(index); // Remove corresponding course
                                     }
-                                    System.out.println("Enter the Age of the Student, whose Records wants to Delete.");
+                                    // Same procedure for age and course
+                                    System.out.println("Enter the Age of the Student, whose Records wants to Delete:");
                                     int age = sc.nextInt();
-                                    if (Age.contains(String.valueOf(age))) {
-                                        Age.remove(age);
+                                    if (Age.contains(age)) {
+                                        int index = Age.indexOf(age);
+                                        Name.remove(index);
+                                        Age.remove(index);
+                                        Course.remove(index);
                                     }
+                                    sc.nextLine(); // Consume newline
                                     System.out
-                                            .println("Enter the Course of the Student, whose Records wants to Delete.");
+                                            .println("Enter the Course of the Student, whose Records wants to Delete:");
                                     String course = sc.nextLine();
-                                    if (Course.contains(String.valueOf(course))) {
-                                        Course.remove(course);
-                                    } else {
-                                        System.out.println("Enter the Data Properly");
+                                    if (Course.contains(course)) {
+                                        int index = Course.indexOf(course);
+                                        Name.remove(index);
+                                        Age.remove(index);
+                                        Course.remove(index);
                                     }
+                                    // No need for else condition here as removing from Name, Age, and Course is
+                                    // already handled above
                                 }
 
+                                System.out.println("Updated Records");
+                                for (int i = 0; i < Name.size(); i++) {
+                                    System.out.println("Data of " + (i + 1) + " Student:");
+                                    System.out.print("Name:   " + Name.get(i));
+                                    System.out.println();
+                                    System.out.print("Age:   " + Age.get(i));
+                                    System.out.println();
+                                    System.out.print("Course:   " + Course.get(i));
+                                    System.out.println();
+                                }
                             } else {
                                 throw new ArrayIndexOutOfBoundsException("Invalid Position");
                             }
