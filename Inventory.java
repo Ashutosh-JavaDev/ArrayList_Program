@@ -10,6 +10,7 @@ class inventory {
         Scanner sc = new Scanner(System.in);
         System.out.println("How many Items You want to add in the Inventory?");
         int itemsNumber=sc.nextInt();
+        sc.nextLine();
         System.out.println("Enter the Items in the Inventory");
         for (int i = 0; i < itemsNumber; i++) {
             list1.add(sc.nextLine());
@@ -25,7 +26,7 @@ class inventory {
                     if (value < itemsNumber && value >= 0) {
                         for (int i = 0; i < value; i++) {
                             System.out.println("Enter the Element wants to remove from the List");
-                            int items = sc.nextInt();
+                            String items = sc.nextLine();
                             if (list1.contains(items)) {
                                 list1.remove(String.valueOf(items));
                             } else {
@@ -65,9 +66,9 @@ class inventory {
                             if (elementtoRemove < list1.size() && elementtoRemove >= 0) {
                                 for (int i = 0; i < elementtoRemove; i++) {
                                     System.out.println("Enter the " + i + " element want to remove from the List");
-                                    int removeElement = sc.nextInt();
+                                    String removeElement = sc.nextLine();
                                     if (list1.contains(removeElement)) {
-                                        list1.remove(Integer.valueOf(removeElement));
+                                        list1.remove(String.valueOf(removeElement));
                                     } else {
                                         System.out.println(removeElement + " Not Present in the List");
                                     }
@@ -110,9 +111,9 @@ class inventory {
                             if (elementRemove < list7.size() && elementRemove >= 0) {
                                 for (int i = 0; i < elementRemove; i++) {
                                     System.out.print("Remove "+i+" Element: ");
-                                    int removeElement = sc.nextInt();
+                                    String removeElement = sc.nextLine();
                                     if (list7.contains(removeElement)) {
-                                        list7.remove(Integer.valueOf(removeElement));
+                                        list7.remove(String.valueOf(removeElement));
                                     } else {
                                         System.out.println(removeElement + " Not Present in the List");
                                     }
