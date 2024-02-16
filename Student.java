@@ -69,20 +69,28 @@ class informational_Data {
                 try {
                     if (remRecords < Records && remRecords >= 0) {
                         for (int i = 0; i < remRecords; i++) {
-                            System.out.println(
-                                    "Enter the Name, Age and Course of the Student, whose Records wants to Delete.");
+                            System.out.println("Enter the Name of the Student, whose Records wants to Delete.");
                             String name = sc.nextLine();
-                            int age = sc.nextInt();
-                            String course = sc.nextLine();
-                            if (Name.contains(String.valueOf(name)) && Age.contains(String.valueOf(age))
-                                    && Course.contains(String.valueOf(course))) {
+                            sc.nextLine();
+                            if (Name.contains(String.valueOf(name))) {
                                 Name.remove(name);
+                            }
+                            System.out.println("Enter the Age of the Student, whose Records wants to Delete.");
+                            int age = sc.nextInt();
+                            sc.nextLine();
+                            if (Age.contains(String.valueOf(age))) {
                                 Age.remove(age);
+                            }
+                            System.out
+                                    .println("Enter the Course of the Student, whose Records wants to Delete.");
+                            String course = sc.nextLine();
+                            if (Course.contains(String.valueOf(course))) {
                                 Course.remove(course);
                             } else {
                                 System.out.println("Enter the Data Properly");
                             }
                         }
+
                         System.out.println("Updated Records");
                         for (int i = 0; i < Name.size(); i++) {
                             System.out.println("Data of " + (i + 1) + " Student:");
