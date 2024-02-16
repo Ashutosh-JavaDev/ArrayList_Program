@@ -64,10 +64,22 @@ class inventory {
                                 for(int i=0;i<elementtoRemove;i++){
                                     System.out.println("Enter the "+i+1+" element want to remove from the List");
                                     int removeElement=sc.nextInt();
-
+                                    if(list1.contains(removeElement)){
+                                        list1.remove(removeElement);
+                                    }
+                                    else{
+                                        System.out.println(removeElement+" Not Present in the List");
+                                    }
                                 }
                             }
+                            else{
+                                throw new ArrayIndexOutOfBoundsException("Invalid Position");
+                            }
                         }
+                        catch(ArrayIndexOutOfBoundsException e1){
+                            System.out.println(e1);
+                        }
+                        
                         break;
                 
                     default:
