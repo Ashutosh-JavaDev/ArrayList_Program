@@ -52,88 +52,84 @@ class inventory {
                 System.out.println("Updated List:   " + list3);
                 break;
 
-                case 3:
+            case 3:
                 System.out.println("Press 4: To Remove First then Add\nPress 5: To Add First then Remove");
-                int press=sc.nextInt();
+                int press = sc.nextInt();
                 switch (press) {
                     case 4:
                         System.out.println("How Many Items Want to remove from the List");
-                        int elementtoRemove=sc.nextInt();
-                        try{
-                            if(elementtoRemove<list1.size()&&elementtoRemove>=0){
-                                for(int i=0;i<elementtoRemove;i++){
-                                    System.out.println("Enter the "+i+" element want to remove from the List");
-                                    int removeElement=sc.nextInt();
-                                    if(list1.contains(removeElement)){
-                                        list1.remove(removeElement);
-                                    }
-                                    else{
-                                        System.out.println(removeElement+" Not Present in the List");
+                        int elementtoRemove = sc.nextInt();
+                        try {
+                            if (elementtoRemove < list1.size() && elementtoRemove >= 0) {
+                                for (int i = 0; i < elementtoRemove; i++) {
+                                    System.out.println("Enter the " + i + " element want to remove from the List");
+                                    int removeElement = sc.nextInt();
+                                    if (list1.contains(removeElement)) {
+                                        list1.remove(Integer.valueOf(removeElement));
+                                    } else {
+                                        System.out.println(removeElement + " Not Present in the List");
                                     }
                                 }
-                                System.out.println("List After Remove Items:   "+list1);
-                            }
-                            else{
+                                System.out.println("List After Remove Items:   " + list1);
+                            } else {
                                 throw new ArrayIndexOutOfBoundsException("Invalid Position");
                             }
-                        }
-                        catch(ArrayIndexOutOfBoundsException e1){
+                        } catch (ArrayIndexOutOfBoundsException e1) {
                             System.out.println(e1);
                         }
                         // Update List
                         System.out.println("How Many new Element wants to add in the List");
-                        int NewElement=sc.nextInt();
-                        ArrayList <Integer>list6=new ArrayList<>();
+                        int NewElement = sc.nextInt();
+                        ArrayList<Integer> list6 = new ArrayList<>();
                         System.out.println("Enter the Element want to add in the List");
-                        for(int i=0;i<NewElement;i++){
+                        for (int i = 0; i < NewElement; i++) {
                             list6.add(sc.nextInt());
                         }
-                        ArrayList<Integer>list5=new ArrayList<>();
+                        ArrayList<Integer> list5 = new ArrayList<>();
                         list5.addAll(list1);
                         list5.addAll(list6);
-                        System.out.println("Updated List:   "+list5);
+                        System.out.println("Updated List:   " + list5);
                         // Break
                         break;
-                        case 5:
+                    case 5:
                         System.out.println("How Many new Element wants to add in the List");
-                        int newElement=sc.nextInt();
-                        ArrayList <Integer>list4=new ArrayList<>();
-                        for(int i=0;i<newElement;i++){
+                        int newElement = sc.nextInt();
+                        ArrayList<Integer> list4 = new ArrayList<>();
+                        for (int i = 0; i < newElement; i++) {
                             list4.add(sc.nextInt());
                         }
-                        ArrayList<Integer>list7=new ArrayList<>();
+                        ArrayList<Integer> list7 = new ArrayList<>();
                         list7.addAll(list1);
                         list7.addAll(list4);
-                        System.out.println("Updated List:   "+list7);
+                        System.out.println("Updated List:   " + list7);
                         System.out.println("How Many Items Want to remove from the List");
-                        int elementRemove=sc.nextInt();
-                        try{
-                            if(elementRemove<list1.size()&&elementRemove>=0){
-                                for(int i=0;i<elementRemove;i++){
-                                    System.out.println("Enter the "+i+1+" element want to remove from the List");
-                                    int removeElement=sc.nextInt();
-                                    if(list1.contains(removeElement)){
-                                        list1.remove(removeElement);
-                                    }
-                                    else{
-                                        System.out.println(removeElement+" Not Present in the List");
+                        int elementRemove = sc.nextInt();
+                        try {
+                            if (elementRemove < list7.size() && elementRemove >= 0) {
+                                for (int i = 0; i < elementRemove; i++) {
+                                    System.out.print("Remove "+i+" Element: ");
+                                    int removeElement = sc.nextInt();
+                                    if (list7.contains(removeElement)) {
+                                        list7.remove(Integer.valueOf(removeElement));
+                                    } else {
+                                        System.out.println(removeElement + " Not Present in the List");
                                     }
                                 }
-                                System.out.println("List After Remove Items:   "+list1);
-                            }
-                            else{
+                                System.out.println("List After Remove Items:   " + list7);
+                            } else {
                                 throw new ArrayIndexOutOfBoundsException("Invalid Position");
                             }
-                        }
-                        catch(ArrayIndexOutOfBoundsException e1){
+                        } catch (ArrayIndexOutOfBoundsException e1) {
                             System.out.println(e1);
                         }
-                       
+
                         break;
-                
+
                     default:
+                        System.out.println("Press Valid Key");
                         break;
                 }
+                break;
             default:
                 System.out.println("Invalid Press");
                 break;
