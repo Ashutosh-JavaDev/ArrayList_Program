@@ -80,7 +80,17 @@ class inventory {
                         catch(ArrayIndexOutOfBoundsException e1){
                             System.out.println(e1);
                         }
-                        
+                        case 2:
+                        System.out.println("How Many new Element wants to add in the List");
+                        int newElement=sc.nextInt();
+                        ArrayList <Integer>list4=new ArrayList<>();
+                        for(int i=0;i<newElement;i++){
+                            list4.add(sc.nextInt());
+                        }
+                        ArrayList<Integer>list5=new ArrayList<>();
+                        list5.addAll(list1);
+                        list5.addAll(list4);
+                        System.out.println("Updated List:   "+list5);
                         break;
                 
                     default:
