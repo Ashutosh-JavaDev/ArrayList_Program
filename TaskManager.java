@@ -12,7 +12,8 @@ class addTask {
 
         sc.nextLine();
         ArrayList<String> AddingTask = new ArrayList<>();
-        System.out.println("Add Task in Your List:\nSyntax:\n0.Your Task\n1.Your Task\n2.Your Task\netc...\nStart Listing: ");
+        System.out.println(
+                "Add Task in Your List:\nSyntax:\n0.Your Task\n1.Your Task\n2.Your Task\netc...\nStart Listing: ");
         for (int i = 0; i < task; i++) {
             AddingTask.add(sc.nextLine());
         }
@@ -21,15 +22,22 @@ class addTask {
         int count = sc.nextInt();
         if (count < task && count >= 0) {
             for (int i = 0; i < count; i++) {
-                System.out.println("Pass Number, which task has been Completed\nfor Eg: 0,1,2...etc...?");
-                int indexOfNumber = sc.nextInt();
-                int index = AddingTask.indexOf(indexOfNumber);
-                AddingTask.remove(index);
+                try {
+                    System.out.println("Pass Number, which task has been Completed\nfor Eg: 0,1,2...etc...?");
+                    int indexOfNumber = sc.nextInt();
+                    if (indexOfNumber >= 0 && indexOfNumber < AddingTask.size()) {
+                        AddingTask.remove(indexOfNumber);
+                    }
+                    else{
+                        System.out.println("Invalid Task Number");
+                    }
+                } catch (ArrayIndexOutOfBoundsException e) {
+                    System.out.println(e);
+                }
             }
             System.out.println("Task Completed SuccessFully");
-            System.out.println("Remaining Task: "+AddingTask);
-        }
-        else{
+            System.out.println("Remaining Task: " + AddingTask);
+        } else {
             System.out.println("You Completetion Task is More than Your Existing Task");
         }
     }
@@ -37,7 +45,7 @@ class addTask {
 
 public class TaskManager {
     public static void main(String[] args) {
-        addTask ob=new addTask();
+        addTask ob = new addTask();
         ob.taskManager();
     }
 }
