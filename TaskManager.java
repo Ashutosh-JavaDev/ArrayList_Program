@@ -9,8 +9,10 @@ class addTask {
         Scanner sc = new Scanner(System.in);
         System.out.println("How many Task You Want add in you list for a Today");
         int task = sc.nextInt();
+
+        sc.nextLine();
         ArrayList<String> AddingTask = new ArrayList<>();
-        System.out.println("Add Task in Your List:\nSyntax:\n0.Your Task\n1.Your Task\n2.Your Task\netc... ");
+        System.out.println("Add Task in Your List:\nSyntax:\n0.Your Task\n1.Your Task\n2.Your Task\netc...\nStart Listing: ");
         for (int i = 0; i < task; i++) {
             AddingTask.add(sc.nextLine());
         }
