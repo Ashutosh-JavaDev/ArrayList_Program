@@ -13,7 +13,7 @@ class addTask {
         sc.nextLine();
         ArrayList<String> AddingTask = new ArrayList<>();
         System.out.println(
-                "Add Task in Your List:\nSyntax:\n0.Your Task\n1.Your Task\n2.Your Task\netc...\nStart Listing: ");
+                "Add Task in Your List:\nSyntax:\n1.Your Task\n2.Your Task\n3.Your Task\netc...\nStart Listing: ");
         for (int i = 0; i < task; i++) {
             AddingTask.add(sc.nextLine());
         }
@@ -23,10 +23,11 @@ class addTask {
         if (count < task && count >= 0) {
             for (int i = 0; i < count; i++) {
                 try {
-                    System.out.println("Pass Number, which task has been Completed\nfor Eg: 0,1,2...etc...?");
+                    System.out.println("Pass Number, which task has been Completed\nfor Eg: 1,2,3...etc...?");
                     int indexOfNumber = sc.nextInt();
-                    if (indexOfNumber >= 0 && indexOfNumber < AddingTask.size()) {
-                        AddingTask.remove(indexOfNumber);
+                    int adjust=indexOfNumber-1;
+                    if (adjust >= 0 && adjust < AddingTask.size()) {
+                        AddingTask.remove(adjust);
                     }
                     else{
                         System.out.println("Invalid Task Number");
