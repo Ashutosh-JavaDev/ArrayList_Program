@@ -1,8 +1,6 @@
 package ArrayList_Program;
-
-import java.util.Scanner;
+ import java.util.Scanner;
 import java.util.ArrayList;
-import java.util.Collections;
 
 class BookInformation {
     ArrayList<String> bookTitle = new ArrayList<>();
@@ -11,7 +9,7 @@ class BookInformation {
     void information() {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("How Many new Books Want to Add in the Libary ? ");
+        System.out.println("How Many new Books Want to Add in the Library ? ");
         int bookCount = sc.nextInt();
         sc.nextLine();
         System.out.println("Enter the Title and Author Name of the Book.");
@@ -33,56 +31,72 @@ class searching extends BookInformation {
 
     void search() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter The Title of the Book, wnat ot see the Presence in the Library");
-        String book = sc.nextLine();
 
-        if (bookTitle.contains(String.valueOf(book.equalsIgnoreCase(book)))) {
-            System.out.println("Book Present in the Libary");
-        } else {
-            System.out.println("Book Not Present in the Libary");
+        System.out.println("Enter The Title of the Book, want to see the Presence in the Library");
+        String book = sc.nextLine().toLowerCase(); // Convert input to lowercase
+        // Iterate over the book titles and check for a case-insensitive match
+        boolean found = false;
+        for (String storedTitle : bookTitle) {
+            if (storedTitle.equalsIgnoreCase(book)) {
+                found = true;
+                break;
+            }
         }
-        System.out.println("Book Title: "+bookTitle+" Author:   "+Author);
-
+        if (found) {
+            System.out.println("Book Present in the Library");
+        } else {
+            System.out.println("Book Not Present in the Library");
+        }
     }
+    
 }
 
 class removing extends searching {
     void removes() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter The Title of the Book, wnat ot see the Presence in the Library");
-        String book = sc.nextLine();
-        if (bookTitle.contains(String.valueOf(book.equalsIgnoreCase(book)))) {
-            int index = bookTitle.indexOf(book);
+        System.out.println("Enter The Title of the Book, want to see the Presence in the Library");
+        String book = sc.nextLine().toLowerCase(); // Convert to lowercase for case-insensitive comparison
+
+        int index = -1;
+        for (int i = 0; i < bookTitle.size(); i++) {
+            if (bookTitle.get(i).equalsIgnoreCase(book)) {
+                index = i;
+                break;
+            }
+        }
+        if (index != -1) {
             bookTitle.remove(index);
             Author.remove(index);
+            System.out.println("Book Removed from the Library");
         } else {
-            System.out.println("Book Not Present in the Libary");
+            System.out.println("Book Not Present in the Library");
         }
-        System.out.println("Book Title: "+bookTitle+" Author:   "+Author);
     }
 }
-class finallys extends removing{
-    void disp(){
-        Scanner sc=new Scanner(System.in);
+
+class finallys extends removing {
+    void disp() {
+        Scanner sc = new Scanner(System.in);
         information();
-        System.out.println("Press 1: To Search Book in the Libary\nPress 2: To Remove book from the Libary\nPress 3: To Add New Books in the Libary");
-        int press=sc.nextInt();
-        switch(press){
+        System.out.println("Press 1: To Search Book in the Library\nPress 2: To Remove book from the Library\nPress 3: To Add New Books in the Library");
+        int press = sc.nextInt();
+        switch (press) {
             case 1:
-            search();
-            break;
+                search();
+                break;
             case 2:
-            removes();
-            break;
+                removes();
+                break;
             case 3:
-            information();
-            break;
+                information();
+                break;
             default:
-            System.out.println("Invalid Press");
-            break;
+                System.out.println("Invalid Press");
+                break;
         }
     }
 }
+
 public class Libary {
     public static void main(String[] args) {
         finallys ob = new finallys();
