@@ -3,7 +3,6 @@ package ArrayList_Program;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Collections;
-
 class BookInformation {
     ArrayList<String> bookTitle = new ArrayList<>();
     ArrayList<String> Author = new ArrayList<>();
@@ -45,7 +44,15 @@ class searching extends BookInformation {
         }
     }
 }
+class removing extends BookInformation{
+    void removes(){
+        Scanner sc=new Scanner(System.in);
+        information();
+        System.out.println("Press 1: To Search Book in the Libary\nPress 2: To Remove Bookk from the Libary");
+        int press=sc.nextInt();
 
+    }
+}
 public class Libary {
     public static void main(String[] args) {
         BookInformation ob = new BookInformation();
