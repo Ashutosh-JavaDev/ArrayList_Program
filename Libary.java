@@ -33,7 +33,6 @@ class searching extends BookInformation {
 
     void search() {
         Scanner sc = new Scanner(System.in);
-        information();
         System.out.println("Enter The Title of the Book, wnat ot see the Presence in the Library");
         String book = sc.nextLine();
 
@@ -49,7 +48,6 @@ class searching extends BookInformation {
 
 class removing extends searching {
     void removes() {
-        information();
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter The Title of the Book, wnat ot see the Presence in the Library");
         String book = sc.nextLine();
