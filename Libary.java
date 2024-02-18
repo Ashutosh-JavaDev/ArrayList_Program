@@ -36,8 +36,8 @@ class searching extends BookInformation {
         information();
         System.out.println("Enter The Title of the Book, wnat ot see the Presence in the Library");
         String book = sc.nextLine();
-        String str = book;
-        if (bookTitle.contains(String.valueOf(book.equalsIgnoreCase(str)))) {
+
+        if (bookTitle.contains(String.valueOf(book.equalsIgnoreCase(book)))) {
             System.out.println("Book Present in the Libary");
         } else {
             System.out.println("Book Not Present in the Libary");
