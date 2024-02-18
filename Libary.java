@@ -17,7 +17,9 @@ class BookInformation{
             System.out.println("Author Name:");
             Author.add(sc.nextLine());
         }
-        System.out.println("Book Title: "+bookTitle+" , Author:   "+Author+"\n");
+        for(int i=0;i<bookCount;i++){
+            System.out.println("Book Title: "+bookTitle.get(i)+" - Author:  "+Author.get(i));
+        }
 
     }
 }
