@@ -24,6 +24,16 @@ class BookInformation{
 
     }
 }
+class searching extends BookInformation{
+    
+    void search(){
+    Scanner sc=new Scanner(System.in);
+        information();
+        System.out.println("Enter The Title of the Book, wnat ot see the Presence in the Library");
+        String book=sc.nextLine();
+        
+    }
+}
 public class Libary {
     public static void main(String[] args) {
         BookInformation ob=new BookInformation();
