@@ -71,11 +71,9 @@ class finallys extends removing{
         int press=sc.nextInt();
         switch(press){
             case 1:
-            information();
             search();
             break;
             case 2:
-            information();
             removes();
             break;
             case 3:
