@@ -66,6 +66,7 @@ class removing extends searching {
 class finallys extends removing{
     void disp(){
         Scanner sc=new Scanner(System.in);
+        information();
         System.out.println("Press 1: To Search Book in the Libary\nPress 2: To Remove book from the Libary\nPress 3: To Add New Books in the Libary");
         int press=sc.nextInt();
         switch(press){
