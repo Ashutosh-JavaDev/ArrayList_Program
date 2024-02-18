@@ -9,6 +9,7 @@ class BookInformation{
         ArrayList<String>Author=new ArrayList<>();
         System.out.println("How Many new Books Want to Add in the Libary ? ");
         int bookCount=sc.nextInt();
+        sc.nextLine();
         System.out.println("Enter the Title and Author Name of the Book.");
         for(int i=0;i<bookCount;i++){
             System.out.println("Book Title:");
