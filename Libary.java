@@ -53,9 +53,10 @@ class removing extends searching {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter The Title of the Book, wnat ot see the Presence in the Library");
         String book = sc.nextLine();
-        String str = book;
-        if (bookTitle.contains(String.valueOf(book.equalsIgnoreCase(str)))) {
-            bookTitle.remove(String.indexOf(book));
+        if (bookTitle.contains(String.valueOf(book.equalsIgnoreCase(book)))) {
+            int index = bookTitle.indexOf(book);
+            bookTitle.remove(index);
+            Author.remove(index);
         } else {
             System.out.println("Book Not Present in the Libary");
         }
