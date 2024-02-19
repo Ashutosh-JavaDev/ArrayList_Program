@@ -70,11 +70,6 @@ class search extends information {
                 System.out.println("Invalid Press");
                 break;
         }
-        System.out.println("Remaining Contacts Details:   ");
-        for (int i = 0; i < Name.size(); i++) {
-            System.out.print("Name: " + Name.get(i));
-            System.out.println("Number: " + Number.get(i));
-        }
     }
 }
 
@@ -88,9 +83,39 @@ class removed extends search {
             Name.remove(index);
             Number.remove(index);
         }
+        System.out.println("Remaining Contacts Details:   ");
+        for (int i = 0; i < Name.size(); i++) {
+            System.out.print("Name: " + Name.get(i));
+            System.out.println("Number: " + Number.get(i));
+        }
+    }
+}
+
+class allData extends removed {
+    void datas() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Press 1:To Search\nPress 2:To Remove\nPress 3:To Add New Data");
+        int press = sc.nextInt();
+        switch (press) {
+            case 1:
+                searching();
+                break;
+            case 2:
+                removes();
+                break;
+            case 3:
+                addInfo();
+                break;
+            default:
+                System.out.println("Invalid Press");
+                break;
+        }
     }
 }
 
 public class Contact {
-
+public static void main(String[] args) {
+    removed ob=new removed();
+    ob.
+}
 }
