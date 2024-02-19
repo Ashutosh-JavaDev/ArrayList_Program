@@ -34,7 +34,12 @@ class search extends information {
         System.out.println("Press 1: To Search By Name\nPress 2: To Search By Number");
         int press=sc.nextInt();
         switch(press){
-            
+            case 1:
+            System.out.println("Enter Contact Name Wants to be Search");
+            String name=sc.nextLine().toLowerCase();
+            for(String storedName:Name){
+                
+            }
         }
     }
 }
