@@ -58,6 +58,7 @@ class search extends information {
                     Name.remove(index);
                     Number.remove(index);
                 }
+                break;
         }
     }
 }
