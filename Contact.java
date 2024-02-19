@@ -51,12 +51,19 @@ class search extends information {
                 }
                 break;
             case 2:
-                System.out.print("Enter the Number of the User want to found in the Contact: +91-");
+                System.out.println("Enter Contact Number Wants to be Search");
                 int num = sc.nextInt();
-                if (Number.contains(num)) {
-                    int index = Number.indexOf(num);
-                    Name.remove(index);
-                    Number.remove(index);
+                boolean founds = false;
+                for (int storedNumber : Number) {
+                    if (storedNumber == num) {
+                        found = true;
+                    }
+                    break;
+                }
+                if (founds) {
+                    System.out.println("Number Found in the Contact");
+                } else {
+                    System.out.println("No User found in the Data related to this Number");
                 }
                 break;
             default:
@@ -70,10 +77,17 @@ class search extends information {
         }
     }
 }
-class removed extends search{
-    void removes(){
+
+class removed extends search {
+    void removes() {
         Scanner sc = new Scanner(System.in);
-       System.out.println("Whose Number want to Delete?");
+        System.out.print("Enter the Number of the User want to Remove from the Contact: +91-");
+        int num = sc.nextInt();
+        if (Number.contains(num)) {
+            int index = Number.indexOf(num);
+            Name.remove(index);
+            Number.remove(index);
+        }
     }
 }
 
