@@ -59,7 +59,21 @@ class search extends information {
                     Number.remove(index);
                 }
                 break;
+            default:
+                System.out.println("Invalid Press");
+                break;
         }
+        System.out.println("Remaining Contacts Details:   ");
+        for (int i = 0; i < Name.size(); i++) {
+            System.out.print("Name: " + Name.get(i));
+            System.out.println("Number: " + Number.get(i));
+        }
+    }
+}
+class removed extends search{
+    void removes(){
+        Scanner sc = new Scanner(System.in);
+       System.out.println("Whose Number want to Delete?");
     }
 }
 
