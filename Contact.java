@@ -115,7 +115,7 @@ class allData extends removed {
 
 public class Contact {
 public static void main(String[] args) {
-    removed ob=new removed();
-    ob.
+    allData ob=new allData();
+    ob.datas();
 }
 }
