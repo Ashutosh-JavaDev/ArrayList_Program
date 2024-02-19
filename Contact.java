@@ -37,8 +37,18 @@ class search extends information {
             case 1:
             System.out.println("Enter Contact Name Wants to be Search");
             String name=sc.nextLine().toLowerCase();
+            boolean found=false;
             for(String storedName:Name){
-                
+                if(storedName.equalsIgnoreCase(name)){
+                    found=true;
+                }
+                break;
+            }
+            if(found){
+                System.out.println("Name Found in the Contact");
+            }
+            else{
+                System.out.println("No User found in the Data related to this Name");
             }
         }
     }
