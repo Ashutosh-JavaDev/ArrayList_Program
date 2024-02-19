@@ -35,7 +35,7 @@ class Search extends Information {
         Scanner sc = new Scanner(System.in);
         System.out.println("Press 1: To Search By Name\nPress 2: To Search By Number");
         int press = sc.nextInt();
-        sc.nextLine(); // Consume newline character left by nextInt()
+        // sc.nextLine(); // Consume newline character left by nextInt()
         switch (press) {
             case 1:
                 System.out.println("Enter Contact Name Wants to be Search");
@@ -99,6 +99,7 @@ class AllData extends Removed {
         Scanner sc = new Scanner(System.in);
         addInfo();
         System.out.println("Press 1: To Search\nPress 2: To Remove\nPress 3: To Add New Data");
+        sc.nextLine();
         int press = sc.nextInt();
         switch (press) {
             case 1:
@@ -114,6 +115,7 @@ class AllData extends Removed {
                 System.out.println("Invalid Press");
                 break;
         }
+        sc.close();
     }
 }
 
