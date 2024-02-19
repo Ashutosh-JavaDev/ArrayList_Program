@@ -5,10 +5,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 class information {
+    ArrayList<String> Name = new ArrayList<>();
+    ArrayList<Integer> Number = new ArrayList<>();
+
     void addInfo() {
         Scanner sc = new Scanner(System.in);
-        ArrayList<String> Name = new ArrayList<>();
-        ArrayList<Integer> Number = new ArrayList<>();
+
         System.out.println("How many Data Want to insert in the Records");
         int Data = sc.nextInt();
         System.out.println("Add Contacts Details");
@@ -27,7 +29,14 @@ class information {
 }
 
 class search extends information {
-
+    void searching(){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Press 1: To Search By Name\nPress 2: To Search By Number");
+        int press=sc.nextInt();
+        switch(press){
+            
+        }
+    }
 }
 
 public class Contact {
