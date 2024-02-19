@@ -29,27 +29,35 @@ class information {
 }
 
 class search extends information {
-    void searching(){
-        Scanner sc=new Scanner(System.in);
+    void searching() {
+        Scanner sc = new Scanner(System.in);
         System.out.println("Press 1: To Search By Name\nPress 2: To Search By Number");
-        int press=sc.nextInt();
-        switch(press){
+        int press = sc.nextInt();
+        switch (press) {
             case 1:
-            System.out.println("Enter Contact Name Wants to be Search");
-            String name=sc.nextLine().toLowerCase();
-            boolean found=false;
-            for(String storedName:Name){
-                if(storedName.equalsIgnoreCase(name)){
-                    found=true;
+                System.out.println("Enter Contact Name Wants to be Search");
+                String name = sc.nextLine().toLowerCase();
+                boolean found = false;
+                for (String storedName : Name) {
+                    if (storedName.equalsIgnoreCase(name)) {
+                        found = true;
+                    }
+                    break;
+                }
+                if (found) {
+                    System.out.println("Name Found in the Contact");
+                } else {
+                    System.out.println("No User found in the Data related to this Name");
                 }
                 break;
-            }
-            if(found){
-                System.out.println("Name Found in the Contact");
-            }
-            else{
-                System.out.println("No User found in the Data related to this Name");
-            }
+            case 2:
+                System.out.print("Enter the Number of the User want to found in the Contact: +91-");
+                int num = sc.nextInt();
+                if (Number.contains(num)) {
+                    int index = Number.indexOf(num);
+                    Name.remove(index);
+                    Number.remove(index);
+                }
         }
     }
 }
