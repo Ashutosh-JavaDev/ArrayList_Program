@@ -1,10 +1,8 @@
 package ArrayList_Program;
-
 import java.util.Scanner;
 import java.util.ArrayList;
-import java.util.Collections;
 
-class information {
+class Information {
     ArrayList<String> Name = new ArrayList<>();
     ArrayList<Integer> Number = new ArrayList<>();
 
@@ -13,26 +11,31 @@ class information {
 
         System.out.println("How many Data Want to insert in the Records");
         int Data = sc.nextInt();
+        sc.nextLine(); // Consume newline character left by nextInt()
         System.out.println("Add Contacts Details");
         for (int i = 0; i < Data; i++) {
-            System.out.print("Name::    ");
+            System.out.print("Name: ");
             Name.add(sc.nextLine());
-            System.out.print("Number:+91-   ");
+            System.out.print("Number: +91-");
             Number.add(sc.nextInt());
+            sc.nextLine(); // Consume newline character left by nextInt()
         }
         System.out.println("Contacts Details:   ");
         for (int i = 0; i < Data; i++) {
-            System.out.print("Name: " + Name.get(i));
-            System.out.println("Number: " + Number.get(i));
+            System.out.println("Name: " + Name.get(i) + " Number: " + Number.get(i));
         }
+
+        // Close the scanner object
+        sc.close();
     }
 }
 
-class search extends information {
+class Search extends Information {
     void searching() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Press 1: To Search By Name\nPress 2: To Search By Number");
         int press = sc.nextInt();
+        sc.nextLine(); // Consume newline character left by nextInt()
         switch (press) {
             case 1:
                 System.out.println("Enter Contact Name Wants to be Search");
@@ -41,8 +44,8 @@ class search extends information {
                 for (String storedName : Name) {
                     if (storedName.equalsIgnoreCase(name)) {
                         found = true;
+                        break; // Move break statement here to exit loop after finding the name
                     }
-                    break;
                 }
                 if (found) {
                     System.out.println("Name Found in the Contact");
@@ -56,9 +59,9 @@ class search extends information {
                 boolean founds = false;
                 for (int storedNumber : Number) {
                     if (storedNumber == num) {
-                        found = true;
+                        founds = true;
+                        break; // Move break statement here to exit loop after finding the number
                     }
-                    break;
                 }
                 if (founds) {
                     System.out.println("Number Found in the Contact");
@@ -73,7 +76,7 @@ class search extends information {
     }
 }
 
-class removed extends search {
+class Removed extends Search {
     void removes() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the Number of the User want to Remove from the Contact: +91-");
@@ -86,15 +89,16 @@ class removed extends search {
         System.out.println("Remaining Contacts Details:   ");
         for (int i = 0; i < Name.size(); i++) {
             System.out.print("Name: " + Name.get(i));
-            System.out.println("Number: " + Number.get(i));
+            System.out.println(" Number: " + Number.get(i));
         }
     }
 }
 
-class allData extends removed {
+class AllData extends Removed {
     void datas() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Press 1:To Search\nPress 2:To Remove\nPress 3:To Add New Data");
+        addInfo();
+        System.out.println("Press 1: To Search\nPress 2: To Remove\nPress 3: To Add New Data");
         int press = sc.nextInt();
         switch (press) {
             case 1:
@@ -114,8 +118,8 @@ class allData extends removed {
 }
 
 public class Contact {
-public static void main(String[] args) {
-    allData ob=new allData();
-    ob.datas();
-}
+    public static void main(String[] args) {
+        AllData ob = new AllData();
+        ob.datas();
+    }
 }
