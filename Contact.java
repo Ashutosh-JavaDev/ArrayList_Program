@@ -100,7 +100,7 @@ class AllData extends Removed {
         addInfo();
         System.out.println("Press 1: To Search\nPress 2: To Remove\nPress 3: To Add New Data");
         int press = sc.nextInt();
-        sc.nextLine(); // Consume newline character left by nextInt()
+        sc.nextLine(); 
 
         switch (press) {
             case 1:
