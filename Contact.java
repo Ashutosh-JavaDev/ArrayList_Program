@@ -116,7 +116,6 @@ class AllData extends Removed {
                 System.out.println("Invalid Press");
                 break;
         }
-       lose();
     }
 }
 
