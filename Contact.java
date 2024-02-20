@@ -34,7 +34,7 @@ class Search extends Information {
         Scanner sc = new Scanner(System.in);
         System.out.println("Press 1: To Search By Name\nPress 2: To Search By Number");
         int press = sc.nextInt();
-        sc.nextLine(); // Consume newline character left by nextInt()
+        sc.nextLine(); 
         switch (press) {
             case 1:
                 System.out.println("Enter Contact Name Wants to be Search");
