@@ -99,7 +99,6 @@ class AllData extends Removed {
         Scanner sc = new Scanner(System.in);
         addInfo();
         System.out.println("Press 1: To Search\nPress 2: To Remove\nPress 3: To Add New Data");
-        // properly
         int press = sc.nextInt();
         sc.nextLine(); // Consume newline character left by nextInt()
 
