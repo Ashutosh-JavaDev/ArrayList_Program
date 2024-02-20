@@ -18,7 +18,7 @@ class Information {
             Name.add(sc.nextLine());
             System.out.print("Number: +91-");
             Number.add(sc.nextInt());
-            sc.nextLine(); // Consume newline character left by nextInt()
+            sc.nextLine(); 
         }
         System.out.println("Contacts Details:   ");
         for (int i = 0; i < Data; i++) {
