@@ -11,7 +11,7 @@ class Information {
 
         System.out.println("How many Data Want to insert in the Records");
         int Data = sc.nextInt();
-        sc.nextLine(); // Consume newline character left by nextInt()
+        sc.nextLine(); 
         System.out.println("Add Contacts Details");
         for (int i = 0; i < Data; i++) {
             System.out.print("Name: ");
