@@ -80,7 +80,7 @@ class Removed extends Search {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the Number of the User want to Remove from the Contact: +91-");
         int num = sc.nextInt();
-        sc.nextLine(); // Consume newline character left by nextInt()
+        sc.nextLine(); 
         if (Number.contains(num)) {
             int index = Number.indexOf(num);
             Name.remove(index);
