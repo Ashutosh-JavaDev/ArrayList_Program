@@ -1,4 +1,5 @@
 package ArrayList_Program;
+
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -11,22 +12,20 @@ class Information {
 
         System.out.println("How many Data Want to insert in the Records");
         int Data = sc.nextInt();
-        sc.nextLine(); 
+        sc.nextLine();
         System.out.println("Add Contacts Details");
         for (int i = 0; i < Data; i++) {
             System.out.print("Name: ");
             Name.add(sc.nextLine());
             System.out.print("Number: +91-");
             Number.add(sc.nextInt());
-            sc.nextLine(); 
+            sc.nextLine();
         }
         System.out.println("Contacts Details:   ");
         for (int i = 0; i < Data; i++) {
             System.out.println("Name: " + Name.get(i) + " Number: " + Number.get(i));
         }
 
-       
-        // sc.close();
     }
 }
 
@@ -100,7 +99,8 @@ class AllData extends Removed {
         Scanner sc = new Scanner(System.in);
         addInfo();
         System.out.println("Press 1: To Search\nPress 2: To Remove\nPress 3: To Add New Data");
-        // sc.nextLine(); // No need for this, as we're already consuming newlines properly
+        // sc.nextLine(); // No need for this, as we're already consuming newlines
+        // properly
         int press = sc.nextInt();
         sc.nextLine(); // Consume newline character left by nextInt()
 
@@ -118,7 +118,8 @@ class AllData extends Removed {
                 System.out.println("Invalid Press");
                 break;
         }
-        // Close the scanner object - Note: It's better to close scanner where you open it.
+        // Close the scanner object - Note: It's better to close scanner where you open
+        // it.
         // sc.close();
     }
 }
