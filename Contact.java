@@ -25,7 +25,7 @@ class Information {
             System.out.println("Name: " + Name.get(i) + " Number: " + Number.get(i));
         }
 
-        // Close the scanner object - Note: It's better to close scanner where you open it.
+       
         // sc.close();
     }
 }
