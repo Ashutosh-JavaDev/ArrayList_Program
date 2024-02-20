@@ -59,7 +59,7 @@ class Search extends Information {
                 for (int storedNumber : Number) {
                     if (storedNumber == num) {
                         founds = true;
-                        break; // Move break statement here to exit loop after finding the number
+                        break;
                     }
                 }
                 if (founds) {
