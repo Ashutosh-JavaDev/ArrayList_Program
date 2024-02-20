@@ -25,8 +25,8 @@ class Information {
             System.out.println("Name: " + Name.get(i) + " Number: " + Number.get(i));
         }
 
-        // Close the scanner object
-        sc.close();
+        // Close the scanner object - Note: It's better to close scanner where you open it.
+        // sc.close();
     }
 }
 
@@ -35,7 +35,7 @@ class Search extends Information {
         Scanner sc = new Scanner(System.in);
         System.out.println("Press 1: To Search By Name\nPress 2: To Search By Number");
         int press = sc.nextInt();
-        // sc.nextLine(); // Consume newline character left by nextInt()
+        sc.nextLine(); // Consume newline character left by nextInt()
         switch (press) {
             case 1:
                 System.out.println("Enter Contact Name Wants to be Search");
@@ -81,6 +81,7 @@ class Removed extends Search {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the Number of the User want to Remove from the Contact: +91-");
         int num = sc.nextInt();
+        sc.nextLine(); // Consume newline character left by nextInt()
         if (Number.contains(num)) {
             int index = Number.indexOf(num);
             Name.remove(index);
@@ -99,8 +100,10 @@ class AllData extends Removed {
         Scanner sc = new Scanner(System.in);
         addInfo();
         System.out.println("Press 1: To Search\nPress 2: To Remove\nPress 3: To Add New Data");
-        sc.nextLine();
+        // sc.nextLine(); // No need for this, as we're already consuming newlines properly
         int press = sc.nextInt();
+        sc.nextLine(); // Consume newline character left by nextInt()
+
         switch (press) {
             case 1:
                 searching();
@@ -115,7 +118,8 @@ class AllData extends Removed {
                 System.out.println("Invalid Press");
                 break;
         }
-        sc.close();
+        // Close the scanner object - Note: It's better to close scanner where you open it.
+        // sc.close();
     }
 }
 
