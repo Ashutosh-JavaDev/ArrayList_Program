@@ -43,7 +43,7 @@ class Search extends Information {
                 for (String storedName : Name) {
                     if (storedName.equalsIgnoreCase(name)) {
                         found = true;
-                        break; // Move break statement here to exit loop after finding the name
+                        break; 
                     }
                 }
                 if (found) {
