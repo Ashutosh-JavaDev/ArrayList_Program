@@ -31,5 +31,8 @@ class Shoping {
 }
 
 public class ShoppingCart {
-
+    public static void main(String[] args) {
+        Shoping ob=new Shoping();
+        ob.addItems();
+    }
 }
