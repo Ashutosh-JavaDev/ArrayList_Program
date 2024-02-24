@@ -13,6 +13,10 @@ class Shoping {
     void addItems() {
         System.out.println("How Many Number of Items You Want to Store in your Shop");
         Quant = sc.nextInt();
+        System.out.println("Add Items in the List:  ");
+        for(int i=0;i<Quant;i++){
+            item.add(sc.nextLine());
+        }
     }
 }
 
