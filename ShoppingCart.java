@@ -38,13 +38,17 @@ class Shoping {
         int press=sc.nextInt();
         switch(press){
            case 1:
-           System.out.println("Which Item you want  to remove?");
-           String items=sc.nextLine().toLowerCase();
-           if(item.contains(items)){
-               item.remove(items);
-                Quantity.remove(Quant);
-                cost.remove(total);
+           System.out.println("Which Item you want to remove?");
+           String itemToRemove = sc.nextLine().toLowerCase();
+           if(item.contains(itemToRemove)){
+               int indexToRemove = item.indexOf(itemToRemove); // Get the index of the item to remove
+               item.remove(indexToRemove); // Remove the item from the list
+               Quantity.remove(indexToRemove); // Remove the corresponding quantity
+               cost.remove(indexToRemove); // Remove the corresponding cost
+           } else {
+               System.out.println("Item not found in the cart.");
            }
+           
         }
         
     }
