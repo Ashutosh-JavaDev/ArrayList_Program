@@ -9,6 +9,9 @@ class Shoping {
     ArrayList<Integer> Quantity = new ArrayList<>();
     ArrayList<Integer>cost=new ArrayList<>();
     Scanner sc = new Scanner(System.in);
+    int Quant;
+    int costing;
+    int total=costing*Quant;
     void addItems() {
         System.out.println("Press Stop for stop Adding item in the Cart");
         String str="";
@@ -20,18 +23,29 @@ class Shoping {
             break;
         }
         System.out.println(itemsName+" Quantity: ");
-        int Quant=sc.nextInt();
+         Quant=sc.nextInt();
         sc.nextLine();
-        int costing;
         System.out.println("Cost of 1 Quantity: ");
         costing=sc.nextInt();
         item.add(itemsName);
         Quantity.add(Quant);
-        cost.add(costing*Quant);
+        cost.add(total);
       }
        
     }
     void removes(){
+        System.out.println("Press 1: To Remove Items\nPress 2: TO remove Some Quantity of the Items");
+        int press=sc.nextInt();
+        switch(press){
+           case 1:
+           System.out.println("Which Item you want  to remove?");
+           String items=sc.nextLine().toLowerCase();
+           if(item.contains(items)){
+               item.remove(items);
+                Quantity.remove(Quant);
+                cost.remove(total);
+           }
+        }
         
     }
     void update(){
