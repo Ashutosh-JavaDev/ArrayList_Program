@@ -48,7 +48,26 @@ class Shoping {
            } else {
                System.out.println("Item not found in the cart.");
            }
-           
+           break;
+           case 2:
+           System.out.println("Which items Quantity, you want to remove  from the List");
+           String itemtoRemove=sc.nextLine().toLowerCase();
+           if(item.contains(itemtoRemove)){
+            System.out.println("How many Quantity you want to remove of "+item+"?");
+            int quant=sc.nextInt();
+            if(quant<=Quantity.size()){
+                Quantity.remove(quant);
+            }
+            else{
+                System.out.println("Removing Item is more then Added Items");
+            }
+           }
+           else{
+            System.out.println(item+" Not Presenet in the List");
+           }
+           break;
+           default:
+           System.out.println("Invalid Press");
         }
         
     }
