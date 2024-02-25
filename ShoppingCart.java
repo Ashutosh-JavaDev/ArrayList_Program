@@ -81,7 +81,7 @@ class Shoping {
                     Quantity.set(indextoRemove, Quantity.get(indextoRemove)-quant);
                     System.out.println("Items After Removal from the Shop:");
                     for (int i = 0; i < item.size(); i++) {
-                        System.out.println("Item Name: " + item.get(i) + " : Quantity: " + Quantity.get(i) + " Total Cost: "+ cost.get(i));
+                        System.out.println("Item Name:"+ item.get(i) + " : Quantity:" + Quantity.get(i) + " Total Cost:"+ cost.get(i));
                     }
                 }
                 else{
