@@ -101,14 +101,24 @@ class Shoping {
     void update() {
         System.out.println("Which Item Quantity want to Update?");
         String itemName = sc.nextLine().toLowerCase();
-        if (item.contains(itemName)) {
-            System.out.println("How Many Quantity want to Add?");
-            int addQuant = sc.nextInt();
-            Quantity.add(addQuant);
-            System.out.println("Updated Quantity: " + Quantity.size());
-        } else {
-            System.out.println("Item Not Present in the Shop");
+        int itemRemove=-1;
+        for(int i=0;i<item.size();i++){
+            if(item.get(i).equalsIgnoreCase(itemName)){
+                itemRemove=i;
+                break;
+            }
         }
+        if(itemRemove!=-1){
+            if (item.contains(itemName)) {
+                System.out.println("How Many Quantity want to Add?");
+                int addQuant = sc.nextInt();
+                Quantity.add(addQuant);
+                System.out.println("Updated Quantity: " + Quantity.size());
+            } else {
+                System.out.println("Item Not Present in the Shop");
+            }
+        }
+              
     }
 
     void disp() {
