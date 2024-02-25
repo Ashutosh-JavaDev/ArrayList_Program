@@ -114,7 +114,7 @@ class Shoping {
                 System.out.println("How Many Quantity want to Add?");
                 int addQuant = sc.nextInt();
               Quantity.set(itemRemove, Quantity.get(itemRemove)+addQuant);
-                System.out.println("Updated Quantity: " + Quantity.size());
+                System.out.println("Updated Quantity: " + Quantity.get(itemRemove));
             } else {
                 System.out.println("Item Not Present in the Shop");
             }
