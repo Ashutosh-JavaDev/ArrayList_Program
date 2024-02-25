@@ -19,7 +19,7 @@ class Shoping {
         while (true) {
             System.out.println("Items Name: ");
             String itemsName = sc.nextLine();
-            if (itemsName.equalsIgnoreCase("Stop")) {
+            if (itemsName.equalsIgnoreCase("Stop")|| itemsName.equalsIgnoreCase("")) {
                 break;
             }
             System.out.println(itemsName + " Quantity: ");
