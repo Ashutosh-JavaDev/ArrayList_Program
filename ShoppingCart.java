@@ -37,7 +37,7 @@ class Shoping {
     }
 
     void removes() {
-        System.out.println("Press 1: To Remove Items\nPress 2: TO remove Some Quantity of the Items");
+        System.out.println("Press 1: To Remove Items\nPress 2: To remove Some Quantity of the Items");
         int press = sc.nextInt();
         sc.nextLine();
         switch (press) {
@@ -52,7 +52,16 @@ class Shoping {
                     }
                 }
                 if(itemRemove!=-1){
-                    
+                   item.remove(itemRemove);
+                   Quantity.remove(itemRemove);
+                   cost.remove(itemRemove);
+                   System.out.println("Items After Removal from the Shop:");
+                   for (int i = 0; i < item.size(); i++) {
+                       System.out.println("Item Name: " + item.get(i) + " : Quantity: " + Quantity.get(i) + " Total Cost: "+ cost.get(i));
+                   }
+                }
+                else{
+                    System.out.println("Items not Present in the List");
                 }
                 break;
             case 2:
