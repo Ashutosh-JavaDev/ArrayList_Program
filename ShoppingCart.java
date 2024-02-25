@@ -100,7 +100,7 @@ class Shoping {
 
     void update() {
         System.out.println("Which Item Quantity want to Update?");
-        String itemName = sc.nextLine().toLowerCase();
+        String itemName = sc.nextLine();
         int itemRemove=-1;
         for(int i=0;i<item.size();i++){
             if(item.get(i).equalsIgnoreCase(itemName)){
