@@ -43,19 +43,16 @@ class Shoping {
         switch (press) {
             case 1:
                 System.out.println("Which Item you want to remove?");
-                String itemToRemove = sc.nextLine();
-                if (item.contains(itemToRemove)) {
-                    int indexToRemove = item.indexOf(itemToRemove); // Get the index of the item to remove
-                    item.remove(indexToRemove); // Remove the item from the list
-                    Quantity.remove(indexToRemove); // Remove the corresponding quantity
-                    cost.remove(indexToRemove); // Remove the corresponding cost
-                    System.out.println("Items After Remove in the Shop:  ");
-                    for (int i = 0; i < Quantity.size(); i++) {
-                        System.out.println("Item Name: " + item.get(i) + " : Qunatity: " + Quantity.get(i) + " Total Cost: "
-                                        + cost.get(i));
+                String itemToRemove = sc.nextLine().toLowerCase();
+                int itemRemove=-1;
+                for(int i=0;i<item.size();i++){
+                    if(item.get(i).equalsIgnoreCase(itemToRemove)){
+                        itemRemove=i;
+                        break;
                     }
-                } else {
-                    System.out.println("Item not found in the cart.");
+                }
+                if(itemRemove!=-1){
+                    
                 }
                 break;
             case 2:
@@ -68,21 +65,23 @@ class Shoping {
                         break;
                     }
                 }
-                if (item.contains(itemtoRemove.equalsIgnoreCase(itemtoRemove))) {
-                    System.out.println("How many Quantity you want to remove of " + item + "?");
-                    int quant = sc.nextInt();
-                    if (quant <= Quantity.size()) {
-                        Quantity.remove(quant);
-                        System.out.println("Items After Removes from the Shop:  ");
-                        for (int i = 0; i < Quantity.size(); i++) {
-                            System.out.println("Item Name: " + item.get(i) + " : Qunatity: " + Quantity.get(i) + " Total Cost: "+cost.get(i));
-                        }
-                    } else {
-                        System.out.println("Removing Item is more then Added Items");
+               if(indextoRemove!=-1){
+                System.out.println("How much Quantity you want to remove from the List of the Item ?");
+                int quant=sc.nextInt();
+                if(quant<=Quantity.get(indextoRemove)){
+                    Quantity.set(indextoRemove, Quantity.get(indextoRemove)-quant);
+                    System.out.println("Items After Removal from the Shop:");
+                    for (int i = 0; i < item.size(); i++) {
+                        System.out.println("Item Name: " + item.get(i) + " : Quantity: " + Quantity.get(i) + " Total Cost: "+ cost.get(i));
                     }
-                } else {
-                    System.out.println(itemtoRemove + " Not Present in the List");
                 }
+                else{
+                    System.out.println("Removing Size is More then Original Size");
+                }
+               }
+               else{
+                System.out.println("Item is Not Present in the List");
+               }
                 break;
             default:
                 System.out.println("Invalid Press");
