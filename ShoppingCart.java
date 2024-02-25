@@ -61,7 +61,7 @@ class Shoping {
             case 2:
                 System.out.println("Which items Quantity, you want to remove  from the List");
                 String itemtoRemove = sc.nextLine().toLowerCase();
-                if (item.contains(itemtoRemove)) {
+                if (item.contains(itemtoRemove.equalsIgnoreCase(itemtoRemove))) {
                     System.out.println("How many Quantity you want to remove of " + item + "?");
                     int quant = sc.nextInt();
                     if (quant <= Quantity.size()) {
@@ -75,7 +75,7 @@ class Shoping {
                         System.out.println("Removing Item is more then Added Items");
                     }
                 } else {
-                    System.out.println(item + " Not Presenet in the List");
+                    System.out.println(itemtoRemove + " Not Present in the List");
                 }
                 break;
             default:
