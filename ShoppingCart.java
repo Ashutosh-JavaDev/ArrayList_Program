@@ -60,7 +60,14 @@ class Shoping {
                 break;
             case 2:
                 System.out.println("Which items Quantity, you want to remove  from the List");
-                String itemtoRemove = sc.nextLine().toLowerCase();
+                String itemtoRemove = sc.nextLine();
+                int indextoRemove=-1;
+                for(int i=0;i<item.size();i++){
+                    if(item.get(i).equalsIgnoreCase(itemtoRemove)){
+                        indextoRemove=i;
+                        break;
+                    }
+                }
                 if (item.contains(itemtoRemove.equalsIgnoreCase(itemtoRemove))) {
                     System.out.println("How many Quantity you want to remove of " + item + "?");
                     int quant = sc.nextInt();
@@ -68,8 +75,7 @@ class Shoping {
                         Quantity.remove(quant);
                         System.out.println("Items After Removes from the Shop:  ");
                         for (int i = 0; i < Quantity.size(); i++) {
-                            System.out.println("Item Name: " + item.get(i) + " : Qunatity: " + Quantity.get(i) + " Total Cost: "
-                                            + cost.get(i));
+                            System.out.println("Item Name: " + item.get(i) + " : Qunatity: " + Quantity.get(i) + " Total Cost: "+cost.get(i));
                         }
                     } else {
                         System.out.println("Removing Item is more then Added Items");
