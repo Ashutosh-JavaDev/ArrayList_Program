@@ -73,7 +73,15 @@ class employee {
     void UpdateDetails(){
         System.out.println("Which Employee Details You want to Update?");
         String NameofEmp=sc.nextLine();
-        
+        int indexFind=-1;
+        for(int i=0;i<EmpName.size();i++){
+            NameofEmp.equalsIgnoreCase(EmpName.get(i));
+            indexFind=i;
+            break;
+        }
+        if(indexFind!=-1){
+            
+        }
     }
 }
 
