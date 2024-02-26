@@ -30,6 +30,7 @@ class employee {
         }
         System.out.println("Employee Details:");
         for (int i = 0; i < EmpName.size(); i++) {
+            System.out.println("Employee "+(i+1)+":");
             System.out.print("Name: " + EmpName.get(i) + " \nEmployee ID: " + EmpID.get(i) + "\nEmployee Deg: "
                     + EmpDegination.get(i) + "\n");
         }
