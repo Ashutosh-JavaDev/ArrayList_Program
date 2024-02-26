@@ -94,6 +94,15 @@ class employee {
                             break;
                         }
                     }
+                    if(indexUpdate!=-1){
+                        System.out.println("By What Name you want to Update?");
+                        String NameUpdate=sc.nextLine();
+                        EmpName.set(indexUpdate, NameUpdate);
+                        System.out.println("Updated Name:");
+                        EmpName.get(indexUpdate);
+                        EmpID.get(indexUpdate);
+                        EmpDegination.get(indexUpdate);
+                    }
             }
         }
     }
