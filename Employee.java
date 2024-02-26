@@ -27,9 +27,16 @@ class employee {
                 EmpDegination.add(empDeg);
             }
         }
+        for(int i=0;i<EmpName.size();i++){
+            System.out.print("Name: "+EmpName+" Employee ID: "+EmpID+" Employee Deg: "+EmpDegination);
+        }
+        System.out.println();
     }
 }
 
 public class Employee {
-
+    public static void main(String[] args) {
+        employee  ob=new employee();
+        ob.addEmployee();
+    }
 }
