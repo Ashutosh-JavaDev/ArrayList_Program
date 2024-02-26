@@ -28,10 +28,9 @@ class employee {
                 EmpDegination.add(empDeg);
             }
         }
-        for(int i=0;i<EmpName.size();i++){
-            System.out.print("Name: "+EmpName+"\nEmployee ID: "+EmpID+"\nEmployee Deg: "+EmpDegination);
-        }
-        System.out.println();
+       while(true){
+        System.out.print("Name: "+EmpName+" \nEmployee ID: "+EmpID+"\nEmployee Deg: "+EmpDegination);
+       }
     }
 }
 
