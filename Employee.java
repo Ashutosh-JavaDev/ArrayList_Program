@@ -29,7 +29,8 @@ class employee {
             }
         }
        while(true){
-        System.out.print("Name: "+EmpName+" \nEmployee ID: "+EmpID+"\nEmployee Deg: "+EmpDegination);
+        System.out.print("Name: "+EmpName.get(0)+" \nEmployee ID: "+EmpID.get(0)+"\nEmployee Deg: "+EmpDegination.get(0)+"\n");
+        break;
        }
     }
 }
