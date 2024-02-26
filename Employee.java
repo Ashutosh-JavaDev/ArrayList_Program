@@ -22,13 +22,14 @@ class employee {
                 System.out.print("EmpID:  ");
                 int empId=sc.nextInt();
                 EmpID.add(empId);
+                sc.nextLine();
                 System.out.print("Employee Degination:  ");
                 String empDeg=sc.nextLine();
                 EmpDegination.add(empDeg);
             }
         }
         for(int i=0;i<EmpName.size();i++){
-            System.out.print("Name: "+EmpName+" Employee ID: "+EmpID+" Employee Deg: "+EmpDegination);
+            System.out.print("Name: "+EmpName+"\nEmployee ID: "+EmpID+"\nEmployee Deg: "+EmpDegination);
         }
         System.out.println();
     }
