@@ -124,6 +124,27 @@ class employee {
                         EmpDegination.get(indeUpdate);
                     }
                     break;
+                    case "Degination":
+                    System.out.println("Whose Degination You want to  Update?");
+                    String updatename = sc.nextLine();
+                    int indeXUpdate = -1;
+                    for (int i = 0; i < EmpName.size(); i++) {
+                        if (updatename.equals(EmpName.get(i))) {
+                            indeXUpdate = i;
+                            break;
+                        }
+                    }
+                    if (indeXUpdate != -1) {
+                        System.out.println("What Will be the  New Degination of this User?");
+                        String DeginationUpdate = sc.nextLine();
+                        EmpDegination.set(indeXUpdate, DeginationUpdate);
+                        System.out.println("Updated Degination:");
+                        EmpName.get(indeXUpdate);
+                        EmpID.get(indeXUpdate);
+                        EmpDegination.get(indeXUpdate);
+                    }
+                    break;
+
             }
         }
     }
