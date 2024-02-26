@@ -73,6 +73,7 @@ class employee {
     void UpdateDetails(){
         System.out.println("Which Employee Details You want to Update?");
         String NameofEmp=sc.nextLine();
+        
     }
 }
 
