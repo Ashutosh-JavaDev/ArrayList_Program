@@ -94,15 +94,36 @@ class employee {
                             break;
                         }
                     }
-                    if(indexUpdate!=-1){
+                    if (indexUpdate != -1) {
                         System.out.println("By What Name you want to Update?");
-                        String NameUpdate=sc.nextLine();
+                        String NameUpdate = sc.nextLine();
                         EmpName.set(indexUpdate, NameUpdate);
                         System.out.println("Updated Name:");
                         EmpName.get(indexUpdate);
                         EmpID.get(indexUpdate);
                         EmpDegination.get(indexUpdate);
                     }
+                    break;
+                case "ID":
+                    System.out.println("Whose ID You want to  Update?");
+                    String updateName = sc.nextLine();
+                    int indeUpdate = -1;
+                    for (int i = 0; i < EmpName.size(); i++) {
+                        if (updateName.equals(EmpName.get(i))) {
+                            indeUpdate = i;
+                            break;
+                        }
+                    }
+                    if (indeUpdate != -1) {
+                        System.out.println("What Will be the  New ID of this User?");
+                        int IDupdate = sc.nextInt();
+                        EmpID.set(indeUpdate, IDupdate);
+                        System.out.println("Updated ID:");
+                        EmpName.get(indeUpdate);
+                        EmpID.get(indeUpdate);
+                        EmpDegination.get(indeUpdate);
+                    }
+                    break;
             }
         }
     }
