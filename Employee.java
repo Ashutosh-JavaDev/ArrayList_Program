@@ -21,12 +21,11 @@ class employee {
             } else {
                 EmpName.add(empName);
                 System.out.print("EmpID:  ");
-                try{
-                int empId = sc.nextInt();
-                EmpID.add(empId);
-                sc.nextLine(); 
-                }
-                catch(InputMismatchException e){
+                try {
+                    int empId = sc.nextInt();
+                    EmpID.add(empId);
+                    sc.nextLine();
+                } catch (InputMismatchException e) {
                     System.out.println(e);
                 }
                 System.out.print("Employee Degination:  ");
@@ -35,52 +34,61 @@ class employee {
             }
             Disp();
         }
-      
+
     }
-    void Disp(){
+
+    void Disp() {
         System.out.println("--------------------------------------------------------------------------");
         System.out.println("Employee Details:");
         for (int i = 0; i < EmpName.size(); i++) {
-            System.out.println("Employee "+(i+1)+":");
+            System.out.println("Employee " + (i + 1) + ":");
             System.out.print("Name: " + EmpName.get(i) + " \nEmployee ID: " + EmpID.get(i) + "\nEmployee Deg: "
                     + EmpDegination.get(i) + "\n");
-                    System.out.println("--------------------------------");
+            System.out.println("--------------------------------");
 
         }
     }
+
     void RemoveEmp() {
         addEmployee();
         System.out.println("Enter the Emoplyee Name, whose Details want to remove ?");
         String employeeName = sc.nextLine();
         int indextoRemove = -1;
         // sc.nextLine();
-        for(int i=0;i<EmpName.size();i++){
-            if(employeeName.equalsIgnoreCase(EmpName.get(i))){
-                indextoRemove=i;
+        for (int i = 0; i < EmpName.size(); i++) {
+            if (employeeName.equalsIgnoreCase(EmpName.get(i))) {
+                indextoRemove = i;
                 break;
             }
         }
-        if(indextoRemove!=-1){
-          EmpName.remove(indextoRemove);
-          EmpID.remove(indextoRemove);
-          EmpDegination.remove(indextoRemove);   
-        }
-        else{
+        if (indextoRemove != -1) {
+            EmpName.remove(indextoRemove);
+            EmpID.remove(indextoRemove);
+            EmpDegination.remove(indextoRemove);
+        } else {
             System.out.println("Employee Not Found");
         }
-       Disp();
+        Disp();
     }
-    void UpdateDetails(){
+
+    void UpdateDetails() {
         System.out.println("Which Employee Details You want to Update?");
-        String NameofEmp=sc.nextLine();
-        int indexFind=-1;
-        for(int i=0;i<EmpName.size();i++){
+        String NameofEmp = sc.nextLine();
+        int indexFind = -1;
+        for (int i = 0; i < EmpName.size(); i++) {
             NameofEmp.equalsIgnoreCase(EmpName.get(i));
-            indexFind=i;
+            indexFind = i;
             break;
         }
-        if(indexFind!=-1){
-            
+        if (indexFind != -1) {
+            System.out.println("Press:\nName to Update Name\nID to update ID\nDegination to update Degination.");
+            String write = sc.nextLine();
+            switch (write) {
+                case "Name":
+                    for (int i = 0; i < EmpName.size(); i++) {
+
+                    }
+            }
         }
     }
 }
