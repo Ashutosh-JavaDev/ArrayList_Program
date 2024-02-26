@@ -14,7 +14,18 @@ class employee {
         while(true){
             System.out.print("Employee Name: ");
             String empName=sc.nextLine();
-            
+            if(empName.equalsIgnoreCase("Stop")|| empName.equalsIgnoreCase("")){
+                break;
+            }
+            else{
+                EmpName.add(empName);
+                System.out.print("EmpID:  ");
+                int empId=sc.nextInt();
+                EmpID.add(empId);
+                System.out.print("Employee Degination:  ");
+                String empDeg=sc.nextLine();
+                EmpDegination.add(empDeg);
+            }
         }
     }
 }
