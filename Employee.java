@@ -172,6 +172,6 @@ class employee {
 public class Employee {
     public static void main(String[] args) {
         employee ob = new employee();
-        ob.RemoveEmp();
+        ob.Choose();
     }
 }
