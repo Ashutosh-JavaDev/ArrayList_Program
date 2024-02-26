@@ -124,7 +124,7 @@ class employee {
                         EmpDegination.get(indeUpdate);
                     }
                     break;
-                    case "Degination":
+                case "Degination":
                     System.out.println("Whose Degination You want to  Update?");
                     String updatename = sc.nextLine();
                     int indeXUpdate = -1;
@@ -144,8 +144,27 @@ class employee {
                         EmpDegination.get(indeXUpdate);
                     }
                     break;
-
+                default:
+                    System.out.println("Choose Wisely or Check Your Alphabet Case of your Press.");
+                    break;
             }
+            Disp();
+        }
+    }
+    void Choose(){
+        addEmployee();
+        System.out.println("Press 1: To Remove Employee Details\nPress 2: To Update Employee Details");
+        int press=sc.nextInt();
+        switch(press){
+            case 1:
+            RemoveEmp();
+            break;
+            case 2:
+            UpdateDetails();    
+            break;
+            default:
+            System.out.println("Invalid Press");
+            break;
         }
     }
 }
