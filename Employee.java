@@ -85,15 +85,15 @@ class employee {
             String write = sc.nextLine();
             switch (write) {
                 case "Name":
-                   System.out.println("Whose Name You want to  Update?");
-                   String UpdateName=sc.nextLine();
-                   int indexUpdate=-1;
-                   for(int i=0;i<EmpName.size();i++){
-                    if(UpdateName.equals(EmpName.get(i))){
-                        indexUpdate=i;
-                        break;
+                    System.out.println("Whose Name You want to  Update?");
+                    String UpdateName = sc.nextLine();
+                    int indexUpdate = -1;
+                    for (int i = 0; i < EmpName.size(); i++) {
+                        if (UpdateName.equals(EmpName.get(i))) {
+                            indexUpdate = i;
+                            break;
+                        }
                     }
-                   }
             }
         }
     }
