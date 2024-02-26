@@ -33,20 +33,27 @@ class employee {
                 String empDeg = sc.nextLine();
                 EmpDegination.add(empDeg);
             }
+            Disp();
         }
+      
+    }
+    void Disp(){
         System.out.println("--------------------------------------------------------------------------");
         System.out.println("Employee Details:");
         for (int i = 0; i < EmpName.size(); i++) {
             System.out.println("Employee "+(i+1)+":");
             System.out.print("Name: " + EmpName.get(i) + " \nEmployee ID: " + EmpID.get(i) + "\nEmployee Deg: "
                     + EmpDegination.get(i) + "\n");
+                    System.out.println("--------------------------------");
+
         }
     }
-
     void RemoveEmp() {
-        int indextoRemove = -1;
+        addEmployee();
         System.out.println("Enter the Emoplyee Name, whose Details want to remove ?");
         String employeeName = sc.nextLine();
+        int indextoRemove = -1;
+        // sc.nextLine();
         for(int i=0;i<EmpName.size();i++){
             if(employeeName.equalsIgnoreCase(EmpName.get(i))){
                 indextoRemove=i;
@@ -61,20 +68,14 @@ class employee {
         else{
             System.out.println("Employee Not Found");
         }
-        System.out.println("--------------------------------------------------------------------------");
-        System.out.println("Employee Details:");
-        for (int i = 0; i < EmpName.size(); i++) {
-            System.out.println("Employee "+(i+1)+":");
-            System.out.print("Name: " + EmpName.get(i) + " \nEmployee ID: " + EmpID.get(i) + "\nEmployee Deg: "
-                    + EmpDegination.get(i) + "\n");
-        }
+       Disp();
     }
 }
 
 public class Employee {
     public static void main(String[] args) {
         employee ob = new employee();
-        ob.addEmployee();
+        // ob.addEmployee();
         ob.RemoveEmp();
     }
 }
