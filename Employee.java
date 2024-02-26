@@ -58,6 +58,16 @@ class employee {
           EmpID.remove(indextoRemove);
           EmpDegination.remove(indextoRemove);   
         }
+        else{
+            System.out.println("Employee Not Found");
+        }
+        System.out.println("--------------------------------------------------------------------------");
+        System.out.println("Employee Details:");
+        for (int i = 0; i < EmpName.size(); i++) {
+            System.out.println("Employee "+(i+1)+":");
+            System.out.print("Name: " + EmpName.get(i) + " \nEmployee ID: " + EmpID.get(i) + "\nEmployee Deg: "
+                    + EmpDegination.get(i) + "\n");
+        }
     }
 }
 
@@ -65,5 +75,6 @@ public class Employee {
     public static void main(String[] args) {
         employee ob = new employee();
         ob.addEmployee();
+        ob.RemoveEmp();
     }
 }
