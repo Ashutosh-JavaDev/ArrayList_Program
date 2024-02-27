@@ -32,8 +32,9 @@ class employee {
                 String empDeg = sc.nextLine();
                 EmpDegination.add(empDeg);
             }
-            Disp();
+           
         }
+         Disp();
 
     }
 
