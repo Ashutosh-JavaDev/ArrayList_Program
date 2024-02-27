@@ -69,7 +69,12 @@ class employee {
         } else {
             System.out.println("Employee Not Found");
         }
-        Disp();
+        try{
+            Disp();
+        }
+        catch(ArrayIndexOutOfBoundsException e){
+            System.out.println(e);
+        }
     }
 
     void UpdateDetails() {
