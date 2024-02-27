@@ -26,7 +26,9 @@ class employee {
                     EmpID.add(empId);
                     sc.nextLine();
                 } catch (InputMismatchException e) {
-                    System.out.println(e);
+                    System.out.println("Invalid Input,pass a valid Employee ID in Integer");
+                    sc.nextLine();
+                    continue;
                 }
                 System.out.print("Employee Degination:  ");
                 String empDeg = sc.nextLine();
@@ -34,22 +36,18 @@ class employee {
             }
 
         }
-        Disp();
+       Disp();
     }
 
     void Disp() {
-        try {
-            System.out.println("--------------------------------------------------------------------------");
-            System.out.println("Employee Details:");
-            for (int i = 0; i < EmpName.size(); i++) {
-                System.out.println("Employee " + (i + 1) + ":");
-                System.out.print("Name: " + EmpName.get(i) + " \nEmployee ID: " + EmpID.get(i) + "\nEmployee Deg: "
-                        + EmpDegination.get(i) + "\n");
-                System.out.println("--------------------------------");
+        System.out.println("--------------------------------------------------------------------------");
+        System.out.println("Employee Details:");
+        for (int i = 0; i < EmpName.size(); i++) {
+            System.out.println("Employee " + (i + 1) + ":");
+            System.out.print("Name: " + EmpName.get(i) + " \nEmployee ID: " + EmpID.get(i) + "\nEmployee Deg: "
+                    + EmpDegination.get(i) + "\n");
+            System.out.println("--------------------------------");
 
-            }
-        } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println(e);
         }
     }
 
