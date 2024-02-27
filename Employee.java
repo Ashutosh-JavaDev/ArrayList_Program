@@ -32,21 +32,24 @@ class employee {
                 String empDeg = sc.nextLine();
                 EmpDegination.add(empDeg);
             }
-           
-        }
-         Disp();
 
+        }
+        Disp();
     }
 
     void Disp() {
-        System.out.println("--------------------------------------------------------------------------");
-        System.out.println("Employee Details:");
-        for (int i = 0; i < EmpName.size(); i++) {
-            System.out.println("Employee " + (i + 1) + ":");
-            System.out.print("Name: " + EmpName.get(i) + " \nEmployee ID: " + EmpID.get(i) + "\nEmployee Deg: "
-                    + EmpDegination.get(i) + "\n");
-            System.out.println("--------------------------------");
+        try {
+            System.out.println("--------------------------------------------------------------------------");
+            System.out.println("Employee Details:");
+            for (int i = 0; i < EmpName.size(); i++) {
+                System.out.println("Employee " + (i + 1) + ":");
+                System.out.print("Name: " + EmpName.get(i) + " \nEmployee ID: " + EmpID.get(i) + "\nEmployee Deg: "
+                        + EmpDegination.get(i) + "\n");
+                System.out.println("--------------------------------");
 
+            }
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println(e);
         }
     }
 
@@ -69,12 +72,7 @@ class employee {
         } else {
             System.out.println("Employee Not Found");
         }
-        try{
-            Disp();
-        }
-        catch(ArrayIndexOutOfBoundsException e){
-            System.out.println(e);
-        }
+
     }
 
     void UpdateDetails() {
@@ -157,20 +155,21 @@ class employee {
             Disp();
         }
     }
-    void Choose(){
+
+    void Choose() {
         addEmployee();
         System.out.println("Press 1: To Remove Employee Details\nPress 2: To Update Employee Details");
-        int press=sc.nextInt();
-        switch(press){
+        int press = sc.nextInt();
+        switch (press) {
             case 1:
-            RemoveEmp();
-            break;
+                RemoveEmp();
+                break;
             case 2:
-            UpdateDetails();    
-            break;
+                UpdateDetails();
+                break;
             default:
-            System.out.println("Invalid Press");
-            break;
+                System.out.println("Invalid Press");
+                break;
         }
     }
 }
