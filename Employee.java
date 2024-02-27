@@ -10,6 +10,7 @@ class employee {
     ArrayList<String> EmpDegination = new ArrayList<>();
     Scanner sc = new Scanner(System.in);
 
+   
     void addEmployee() {
         System.out.println("Press Enter or Stop to stop adding Details");
         System.out.println("Add Employee Details:");
@@ -24,20 +25,20 @@ class employee {
                 try {
                     int empId = sc.nextInt();
                     EmpID.add(empId);
-                    sc.nextLine();
+                    sc.nextLine(); // Consume newline character
                 } catch (InputMismatchException e) {
-                    System.out.println("Invalid Input,pass a valid Employee ID in Integer");
-                    sc.nextLine();
-                    continue;
+                    System.out.println("Invalid input. Please enter an integer for Employee ID.");
+                    sc.nextLine(); // Clear the input buffer
+                    continue; // Restart the loop
                 }
-                System.out.print("Employee Degination:  ");
+                System.out.print("Employee Designation:  ");
                 String empDeg = sc.nextLine();
                 EmpDegination.add(empDeg);
             }
-
         }
-       Disp();
+        Disp();
     }
+
 
     void Disp() {
         System.out.println("--------------------------------------------------------------------------");
