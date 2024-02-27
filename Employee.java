@@ -1,5 +1,4 @@
 package ArrayList_Program;
-
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -78,8 +77,7 @@ class EmployeeManager {
 
     // Method to update employee details
     void updateEmployeeDetails() {
-        // Prompt user to enter the name of the employee whose details they want to
-        // update
+        // Prompt user to enter the name of the employee whose details they want to update
         System.out.println("Enter the Employee Name whose Details you want to Update:");
         String employeeName = sc.nextLine();
         int indexToUpdate = -1;
@@ -93,8 +91,7 @@ class EmployeeManager {
         // Check if the employee was found
         if (indexToUpdate != -1) {
             // Prompt user to select the field to update
-            System.out.println(
-                    "Press:\n1. Name to Update Name\n2. ID to Update ID\n3. Designation to Update Designation");
+            System.out.println("Press:\n1. Name to Update Name\n2. ID to Update ID\n3. Designation to Update Designation");
             int choice = sc.nextInt();
             sc.nextLine(); // Consume newline character
             switch (choice) {
@@ -102,22 +99,12 @@ class EmployeeManager {
                     // Update the name of the employee
                     System.out.println("Enter the new Name:");
                     String newName = sc.nextLine();
-                    if (newName.equals("")) {
-                        System.out.println("Write Valid New Name");
-                        EmpName.set(indexToUpdate, newName);
-                        // Print the updated details
-                        System.out.println("Updated Name:");
-                        System.out.println("Name: " + EmpName.get(indexToUpdate) +
-                                "\nEmployee ID: " + EmpID.get(indexToUpdate) +
-                                "\nEmployee Designation: " + EmpDesignation.get(indexToUpdate));
-                    } else {
-                        EmpName.set(indexToUpdate, newName);
-                        // Print the updated details
-                        System.out.println("Updated Name:");
-                        System.out.println("Name: " + EmpName.get(indexToUpdate) +
-                                "\nEmployee ID: " + EmpID.get(indexToUpdate) +
-                                "\nEmployee Designation: " + EmpDesignation.get(indexToUpdate));
-                    }
+                    EmpName.set(indexToUpdate, newName);
+                    // Print the updated details
+                    System.out.println("Updated Name:");
+                    System.out.println("Name: " + EmpName.get(indexToUpdate) + 
+                                       "\nEmployee ID: " + EmpID.get(indexToUpdate) + 
+                                       "\nEmployee Designation: " + EmpDesignation.get(indexToUpdate));
                     break;
                 case 2:
                     // Update the ID of the employee
@@ -126,9 +113,9 @@ class EmployeeManager {
                     EmpID.set(indexToUpdate, newId);
                     // Print the updated details
                     System.out.println("Updated ID:");
-                    System.out.println("Name: " + EmpName.get(indexToUpdate) +
-                            "\nEmployee ID: " + EmpID.get(indexToUpdate) +
-                            "\nEmployee Designation: " + EmpDesignation.get(indexToUpdate));
+                    System.out.println("Name: " + EmpName.get(indexToUpdate) + 
+                                       "\nEmployee ID: " + EmpID.get(indexToUpdate) + 
+                                       "\nEmployee Designation: " + EmpDesignation.get(indexToUpdate));
                     break;
                 case 3:
                     // Update the designation of the employee
@@ -137,9 +124,9 @@ class EmployeeManager {
                     EmpDesignation.set(indexToUpdate, newDesignation);
                     // Print the updated details
                     System.out.println("Updated Designation:");
-                    System.out.println("Name: " + EmpName.get(indexToUpdate) +
-                            "\nEmployee ID: " + EmpID.get(indexToUpdate) +
-                            "\nEmployee Designation: " + EmpDesignation.get(indexToUpdate));
+                    System.out.println("Name: " + EmpName.get(indexToUpdate) + 
+                                       "\nEmployee ID: " + EmpID.get(indexToUpdate) + 
+                                       "\nEmployee Designation: " + EmpDesignation.get(indexToUpdate));
                     break;
                 default:
                     System.out.println("Invalid Choice");
@@ -149,6 +136,7 @@ class EmployeeManager {
             System.out.println("Employee Not Found");
         }
     }
+    
 
     // Method to choose the operation
     void chooseOperation() {
