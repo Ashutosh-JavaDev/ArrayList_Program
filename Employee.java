@@ -137,6 +137,23 @@ class EmployeeManager {
         }
     }
     
+    void search(){
+        System.out.println("Enter the Employee name want ot be Search.");
+        String Searchname=sc.nextLine();
+        int c=0;
+        sc.nextLine();
+        for(int i=0;i<EmpName.size();i++){
+            if(Searchname.equalsIgnoreCase(EmpName.get(i))){
+                c++;
+            }
+        }
+        if(c>0){
+            System.out.println("Employee Found in the List");
+        }
+        else{
+            System.out.println("Employee Not In the List");
+        }
+    }
 
     // Method to choose the operation
     void chooseOperation() {
