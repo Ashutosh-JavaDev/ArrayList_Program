@@ -1,4 +1,5 @@
 package ArrayList_Program;
+
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -77,7 +78,8 @@ class EmployeeManager {
 
     // Method to update employee details
     void updateEmployeeDetails() {
-        // Prompt user to enter the name of the employee whose details they want to update
+        // Prompt user to enter the name of the employee whose details they want to
+        // update
         System.out.println("Enter the Employee Name whose Details you want to Update:");
         String employeeName = sc.nextLine();
         int indexToUpdate = -1;
@@ -91,7 +93,8 @@ class EmployeeManager {
         // Check if the employee was found
         if (indexToUpdate != -1) {
             // Prompt user to select the field to update
-            System.out.println("Press:\n1. Name to Update Name\n2. ID to Update ID\n3. Designation to Update Designation");
+            System.out.println(
+                    "Press:\n1. Name to Update Name\n2. ID to Update ID\n3. Designation to Update Designation");
             int choice = sc.nextInt();
             sc.nextLine(); // Consume newline character
             switch (choice) {
@@ -102,9 +105,9 @@ class EmployeeManager {
                     EmpName.set(indexToUpdate, newName);
                     // Print the updated details
                     System.out.println("Updated Name:");
-                    System.out.println("Name: " + EmpName.get(indexToUpdate) + 
-                                       "\nEmployee ID: " + EmpID.get(indexToUpdate) + 
-                                       "\nEmployee Designation: " + EmpDesignation.get(indexToUpdate));
+                    System.out.println("Name: " + EmpName.get(indexToUpdate) +
+                            "\nEmployee ID: " + EmpID.get(indexToUpdate) +
+                            "\nEmployee Designation: " + EmpDesignation.get(indexToUpdate));
                     break;
                 case 2:
                     // Update the ID of the employee
@@ -113,9 +116,9 @@ class EmployeeManager {
                     EmpID.set(indexToUpdate, newId);
                     // Print the updated details
                     System.out.println("Updated ID:");
-                    System.out.println("Name: " + EmpName.get(indexToUpdate) + 
-                                       "\nEmployee ID: " + EmpID.get(indexToUpdate) + 
-                                       "\nEmployee Designation: " + EmpDesignation.get(indexToUpdate));
+                    System.out.println("Name: " + EmpName.get(indexToUpdate) +
+                            "\nEmployee ID: " + EmpID.get(indexToUpdate) +
+                            "\nEmployee Designation: " + EmpDesignation.get(indexToUpdate));
                     break;
                 case 3:
                     // Update the designation of the employee
@@ -124,9 +127,9 @@ class EmployeeManager {
                     EmpDesignation.set(indexToUpdate, newDesignation);
                     // Print the updated details
                     System.out.println("Updated Designation:");
-                    System.out.println("Name: " + EmpName.get(indexToUpdate) + 
-                                       "\nEmployee ID: " + EmpID.get(indexToUpdate) + 
-                                       "\nEmployee Designation: " + EmpDesignation.get(indexToUpdate));
+                    System.out.println("Name: " + EmpName.get(indexToUpdate) +
+                            "\nEmployee ID: " + EmpID.get(indexToUpdate) +
+                            "\nEmployee Designation: " + EmpDesignation.get(indexToUpdate));
                     break;
                 default:
                     System.out.println("Invalid Choice");
@@ -136,21 +139,20 @@ class EmployeeManager {
             System.out.println("Employee Not Found");
         }
     }
-    
-    void search(){
+
+    void search() {
         System.out.println("Enter the Employee name want ot be Search.");
-        String Searchname=sc.nextLine();
-        int c=0;
+        String Searchname = sc.nextLine();
+        int c = 0;
         sc.nextLine();
-        for(int i=0;i<EmpName.size();i++){
-            if(Searchname.equalsIgnoreCase(EmpName.get(i))){
+        for (int i = 0; i < EmpName.size(); i++) {
+            if (Searchname.equalsIgnoreCase(EmpName.get(i))) {
                 c++;
             }
         }
-        if(c>0){
+        if (c > 0) {
             System.out.println("Employee Found in the List");
-        }
-        else{
+        } else {
             System.out.println("Employee Not In the List");
         }
     }
@@ -158,7 +160,8 @@ class EmployeeManager {
     // Method to choose the operation
     void chooseOperation() {
         addEmployee();
-        System.out.println("Press:\n1. To Remove Employee Details\n2. To Update Employee Details");
+        System.out.println(
+                "Press:\n1. To Remove Employee Details\n2. To Update Employee Details\n3. To search User by Name");
         int choice = sc.nextInt();
         sc.nextLine(); // Consume newline character
         switch (choice) {
@@ -167,6 +170,9 @@ class EmployeeManager {
                 break;
             case 2:
                 updateEmployeeDetails();
+                break;
+            case 3:
+                search();
                 break;
             default:
                 System.out.println("Invalid Choice");
