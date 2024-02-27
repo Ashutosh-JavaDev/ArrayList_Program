@@ -69,6 +69,7 @@ class EmployeeManager {
             EmpID.remove(indexToRemove);
             EmpDesignation.remove(indexToRemove);
             System.out.println("Employee details removed successfully.");
+            displayEmployees();
         } else {
             System.out.println("Employee Not Found");
         }
@@ -94,16 +95,28 @@ class EmployeeManager {
                     System.out.println("Enter the new Name:");
                     String newName = sc.nextLine();
                     EmpName.set(indexToUpdate, newName);
+                    System.out.println("Updated Name:");
+                    EmpName.get(indexToUpdate);
+                    EmpID.get(indexToUpdate);
+                    EmpDesignation.get(indexToUpdate);
                     break;
                 case 2:
                     System.out.println("Enter the new ID:");
                     int newId = sc.nextInt();
                     EmpID.set(indexToUpdate, newId);
+                    System.out.println("Updated ID:");
+                    EmpName.get(indexToUpdate);
+                    EmpID.get(indexToUpdate);
+                    EmpDesignation.get(indexToUpdate);
                     break;
                 case 3:
                     System.out.println("Enter the new Designation:");
                     String newDesignation = sc.nextLine();
                     EmpDesignation.set(indexToUpdate, newDesignation);
+                    System.out.println("Updated Name:");
+                    EmpName.get(indexToUpdate);
+                    EmpID.get(indexToUpdate);
+                    EmpDesignation.get(indexToUpdate);
                     break;
                 default:
                     System.out.println("Invalid Choice");
