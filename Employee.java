@@ -1,16 +1,15 @@
 package ArrayList_Program;
-
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-class employee {
+class EmployeeManager {
     ArrayList<String> EmpName = new ArrayList<>();
     ArrayList<Integer> EmpID = new ArrayList<>();
-    ArrayList<String> EmpDegination = new ArrayList<>();
+    ArrayList<String> EmpDesignation = new ArrayList<>();
     Scanner sc = new Scanner(System.in);
 
-   
+    // Method to add employee details
     void addEmployee() {
         System.out.println("Press Enter or Stop to stop adding Details");
         System.out.println("Add Employee Details:");
@@ -28,146 +27,108 @@ class employee {
                     sc.nextLine(); // Consume newline character
                 } catch (InputMismatchException e) {
                     System.out.println("Invalid input. Please enter an integer for Employee ID.");
+                    // Clear the memory by removing the last added employee details
+                    EmpName.remove(EmpName.size() - 1);
+                    EmpID.remove(EmpID.size() - 1);
+                    EmpDesignation.remove(EmpDesignation.size() - 1);
                     sc.nextLine(); // Clear the input buffer
-                    continue; // Restart the loop
+                    continue;
                 }
                 System.out.print("Employee Designation:  ");
                 String empDeg = sc.nextLine();
-                EmpDegination.add(empDeg);
+                EmpDesignation.add(empDeg);
             }
         }
-        Disp();
+        displayEmployees();
     }
 
-
-    void Disp() {
+    // Method to display employee details
+    void displayEmployees() {
         System.out.println("--------------------------------------------------------------------------");
         System.out.println("Employee Details:");
         for (int i = 0; i < EmpName.size(); i++) {
             System.out.println("Employee " + (i + 1) + ":");
-            System.out.print("Name: " + EmpName.get(i) + " \nEmployee ID: " + EmpID.get(i) + "\nEmployee Deg: "
-                    + EmpDegination.get(i) + "\n");
-            System.out.println("--------------------------------");
-
+            System.out.println("Name: " + EmpName.get(i) + "\nEmployee ID: " + EmpID.get(i) + "\nEmployee Designation: "
+                    + EmpDesignation.get(i) + "\n--------------------------------");
         }
     }
 
-    void RemoveEmp() {
-        addEmployee();
-        System.out.println("Enter the Emoplyee Name, whose Details want to remove ?");
+    // Method to remove employee details
+    void removeEmployee() {
+        System.out.println("Enter the Employee Name whose Details you want to remove:");
         String employeeName = sc.nextLine();
-        int indextoRemove = -1;
-        // sc.nextLine();
+        int indexToRemove = -1;
         for (int i = 0; i < EmpName.size(); i++) {
             if (employeeName.equalsIgnoreCase(EmpName.get(i))) {
-                indextoRemove = i;
+                indexToRemove = i;
                 break;
             }
         }
-        if (indextoRemove != -1) {
-            EmpName.remove(indextoRemove);
-            EmpID.remove(indextoRemove);
-            EmpDegination.remove(indextoRemove);
+        if (indexToRemove != -1) {
+            EmpName.remove(indexToRemove);
+            EmpID.remove(indexToRemove);
+            EmpDesignation.remove(indexToRemove);
+            System.out.println("Employee details removed successfully.");
         } else {
             System.out.println("Employee Not Found");
         }
-
     }
 
-    void UpdateDetails() {
-        System.out.println("Which Employee Details You want to Update?");
-        String NameofEmp = sc.nextLine();
-        int indexFind = -1;
+    // Method to update employee details
+    void updateEmployeeDetails() {
+        System.out.println("Enter the Employee Name whose Details you want to Update:");
+        String employeeName = sc.nextLine();
+        int indexToUpdate = -1;
         for (int i = 0; i < EmpName.size(); i++) {
-            NameofEmp.equalsIgnoreCase(EmpName.get(i));
-            indexFind = i;
-            break;
+            if (employeeName.equalsIgnoreCase(EmpName.get(i))) {
+                indexToUpdate = i;
+                break;
+            }
         }
-        if (indexFind != -1) {
-            System.out.println("Press:\nName to Update Name\nID to update ID\nDegination to update Degination.");
-            String write = sc.nextLine();
-            switch (write) {
-                case "Name":
-                    System.out.println("Whose Name You want to  Update?");
-                    String UpdateName = sc.nextLine();
-                    int indexUpdate = -1;
-                    for (int i = 0; i < EmpName.size(); i++) {
-                        if (UpdateName.equals(EmpName.get(i))) {
-                            indexUpdate = i;
-                            break;
-                        }
-                    }
-                    if (indexUpdate != -1) {
-                        System.out.println("By What Name you want to Update?");
-                        String NameUpdate = sc.nextLine();
-                        EmpName.set(indexUpdate, NameUpdate);
-                        System.out.println("Updated Name:");
-                        EmpName.get(indexUpdate);
-                        EmpID.get(indexUpdate);
-                        EmpDegination.get(indexUpdate);
-                    }
+        if (indexToUpdate != -1) {
+            System.out.println("Press:\n1. Name to Update Name\n2. ID to Update ID\n3. Designation to Update Designation");
+            int choice = sc.nextInt();
+            sc.nextLine(); // Consume newline character
+            switch (choice) {
+                case 1:
+                    System.out.println("Enter the new Name:");
+                    String newName = sc.nextLine();
+                    EmpName.set(indexToUpdate, newName);
                     break;
-                case "ID":
-                    System.out.println("Whose ID You want to  Update?");
-                    String updateName = sc.nextLine();
-                    int indeUpdate = -1;
-                    for (int i = 0; i < EmpName.size(); i++) {
-                        if (updateName.equals(EmpName.get(i))) {
-                            indeUpdate = i;
-                            break;
-                        }
-                    }
-                    if (indeUpdate != -1) {
-                        System.out.println("What Will be the  New ID of this User?");
-                        int IDupdate = sc.nextInt();
-                        EmpID.set(indeUpdate, IDupdate);
-                        System.out.println("Updated ID:");
-                        EmpName.get(indeUpdate);
-                        EmpID.get(indeUpdate);
-                        EmpDegination.get(indeUpdate);
-                    }
+                case 2:
+                    System.out.println("Enter the new ID:");
+                    int newId = sc.nextInt();
+                    EmpID.set(indexToUpdate, newId);
                     break;
-                case "Degination":
-                    System.out.println("Whose Degination You want to  Update?");
-                    String updatename = sc.nextLine();
-                    int indeXUpdate = -1;
-                    for (int i = 0; i < EmpName.size(); i++) {
-                        if (updatename.equals(EmpName.get(i))) {
-                            indeXUpdate = i;
-                            break;
-                        }
-                    }
-                    if (indeXUpdate != -1) {
-                        System.out.println("What Will be the  New Degination of this User?");
-                        String DeginationUpdate = sc.nextLine();
-                        EmpDegination.set(indeXUpdate, DeginationUpdate);
-                        System.out.println("Updated Degination:");
-                        EmpName.get(indeXUpdate);
-                        EmpID.get(indeXUpdate);
-                        EmpDegination.get(indeXUpdate);
-                    }
+                case 3:
+                    System.out.println("Enter the new Designation:");
+                    String newDesignation = sc.nextLine();
+                    EmpDesignation.set(indexToUpdate, newDesignation);
                     break;
                 default:
-                    System.out.println("Choose Wisely or Check Your Alphabet Case of your Press.");
-                    break;
+                    System.out.println("Invalid Choice");
             }
-            Disp();
+            System.out.println("Employee details updated successfully.");
+        } else {
+            System.out.println("Employee Not Found");
         }
     }
 
-    void Choose() {
+    // Method to choose the operation
+    void chooseOperation() {
         addEmployee();
-        System.out.println("Press 1: To Remove Employee Details\nPress 2: To Update Employee Details");
-        int press = sc.nextInt();
-        switch (press) {
+        System.out.println("Press:\n1. To Remove Employee Details\n2. To Update Employee Details");
+        int choice = sc.nextInt();
+        sc.nextLine(); // Consume newline character
+        switch (choice) {
             case 1:
-                RemoveEmp();
+                removeEmployee();
                 break;
             case 2:
-                UpdateDetails();
+                updateEmployeeDetails();
                 break;
             default:
-                System.out.println("Invalid Press");
+                System.out.println("Invalid Choice");
                 break;
         }
     }
@@ -175,7 +136,7 @@ class employee {
 
 public class Employee {
     public static void main(String[] args) {
-        employee ob = new employee();
-        ob.Choose();
+        EmployeeManager manager = new EmployeeManager();
+        manager.chooseOperation();
     }
 }
