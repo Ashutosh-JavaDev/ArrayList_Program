@@ -26,7 +26,10 @@ public class Recipe {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         recipe ob=new recipe();
-
+        System.out.println("Press Enter to stop");
+        if(ob.returnName().equals("")){
+            
+        }
     }
 
 }
