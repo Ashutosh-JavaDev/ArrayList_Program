@@ -6,7 +6,6 @@ import java.util.ArrayList;
 class recipe {
     ArrayList<String> recipesName = new ArrayList<>();
     ArrayList<Integer> recipePrice = new ArrayList<>();
-    Scanner sc = new Scanner(System.in);
 
     void Recipes(ArrayList<String> recipesNAme, ArrayList<Integer> recipePrice) {
         this.recipePrice = recipePrice;
@@ -24,5 +23,9 @@ class recipe {
 }
 
 public class Recipe {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+    }
 
 }
