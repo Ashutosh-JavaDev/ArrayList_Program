@@ -107,8 +107,8 @@ class caseSwitch extends Recipeses {
 
 public class Ingredient {
     public static void main(String[] args) {
-        Recipeses ob = new Recipeses();
-        ob.addingValue(true);
+        caseSwitch ob = new caseSwitch();
+        ob.caseState();
         System.out.println(ob.setName());
         System.out.println(ob.setPrice());
     }
