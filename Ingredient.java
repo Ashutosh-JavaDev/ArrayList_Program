@@ -61,6 +61,26 @@ class Recipeses {
         }
 
     }
+    void updateIngrident(){
+        System.out.println("Which Ingrident You want to Update");
+        Rname=sc.nextLine();
+        Caseignorance();
+        if(indexOFremove!=-1){
+            System.out.println("Update the Name and Price of the Ingrident");
+            System.out.print("New Name: ");
+            String newName=sc.nextLine();
+            System.out.print("New Price: ");
+            int newPrice=sc.nextInt();
+            sc.nextLine();
+            Iname.set(indexOFremove, newName);
+            iPrice.set(indexOFremove, newPrice);
+            System.out.println(Iname);
+            System.out.println(iPrice);
+        }
+        else{
+            System.out.println("Item Not Present in the List.");
+        }
+    }
 
 }
 
