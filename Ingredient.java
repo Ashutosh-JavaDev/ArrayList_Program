@@ -29,17 +29,19 @@ class Recipe {
         System.out.println(Sname);
         System.out.println(Sprice);
     }
-    ArrayList<String>setName(){
+
+    ArrayList<String> setName() {
         return Iname;
     }
-    ArrayList<Integer>setPrice(){
+
+    ArrayList<Integer> setPrice() {
         return iPrice;
     }
 }
 
 public class Ingredient {
-public static void main(String[] args) {
-    Recipe ob=new Recipe();
-
-}
+    public static void main(String[] args) {
+        Recipe ob = new Recipe();
+        ob.addingValue(ob.setName(),ob.setPrice());
+    }
 }
