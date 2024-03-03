@@ -3,6 +3,8 @@ package ArrayList_Program;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import javax.net.ssl.SNIHostName;
+
 class Recipe {
     ArrayList<String> Iname = new ArrayList<>();
     ArrayList<Integer> iPrice = new ArrayList<>();
@@ -22,7 +24,10 @@ class Recipe {
             System.out.print("Price: ");
             int price = sc.nextInt();
             Sprice.add(price);
+            addingValue(Sname, Sprice);
         }
+        System.out.println(Sname);
+        System.out.println(Sprice);
     }
 }
 
