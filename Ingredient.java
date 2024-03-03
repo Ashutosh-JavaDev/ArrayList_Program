@@ -35,6 +35,19 @@ class Recipeses {
     ArrayList<Integer> setPrice() {
         return iPrice;
     }
+
+    void removeRecipe() {
+        System.out.println("Which Ingrident You want to remove from the List");
+        String Rname = sc.nextLine();
+        int indexOFremove;
+        for (int i = 0; i < Iname.size(); i++) {
+            if (Rname.equalsIgnoreCase(Iname.get(i))) {
+                indexOFremove = i;
+                break;
+            }
+        }
+
+    }
 }
 
 public class Ingredient {
