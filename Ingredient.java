@@ -87,7 +87,7 @@ class Recipeses {
 
 class caseSwitch extends Recipeses {
     void caseState() {
-        addingValue(false);
+        addingValue(true);
         System.out.println("Press 1: To Remove Item From the List\nPress 2: To Update the Ingrident From the List");
         int press = sc.nextInt();
         sc.nextLine();
