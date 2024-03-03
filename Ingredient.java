@@ -39,12 +39,21 @@ class Recipeses {
     void removeRecipe() {
         System.out.println("Which Ingrident You want to remove from the List");
         String Rname = sc.nextLine();
-        int indexOFremove;
+        int indexOFremove=-1;
         for (int i = 0; i < Iname.size(); i++) {
             if (Rname.equalsIgnoreCase(Iname.get(i))) {
                 indexOFremove = i;
                 break;
             }
+        }
+        if(indexOFremove!=-1){
+            Iname.remove(indexOFremove);
+            iPrice.remove(indexOFremove);
+            System.out.println(Iname);
+            System.out.println(iPrice);
+        }
+        else{
+            System.out.println("Ingridient Not Found in the List");
         }
 
     }
