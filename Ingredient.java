@@ -9,6 +9,7 @@ class Recipeses {
     Scanner sc = new Scanner(System.in);
     int indexOFremove = -1;
     String Rname;
+
     void addingValue(boolean firstTIme) {
         if (firstTIme) {
             System.out.println("Press Enter to Stop Adding Value in The List");
@@ -38,7 +39,7 @@ class Recipeses {
     }
 
     void Caseignorance() {
-       
+
         for (int i = 0; i < Iname.size(); i++) {
             if (Rname.equalsIgnoreCase(Iname.get(i))) {
                 indexOFremove = i;
@@ -49,7 +50,7 @@ class Recipeses {
 
     void removeRecipe() {
         System.out.println("Which Ingrident You want to remove from the List");
-         Rname = sc.nextLine();
+        Rname = sc.nextLine();
         Caseignorance();
         if (indexOFremove != -1) {
             Iname.remove(indexOFremove);
@@ -61,27 +62,47 @@ class Recipeses {
         }
 
     }
-    void updateIngrident(){
+
+    void updateIngrident() {
         System.out.println("Which Ingrident You want to Update");
-        Rname=sc.nextLine();
+        Rname = sc.nextLine();
         Caseignorance();
-        if(indexOFremove!=-1){
+        if (indexOFremove != -1) {
             System.out.println("Update the Name and Price of the Ingrident");
             System.out.print("New Name: ");
-            String newName=sc.nextLine();
+            String newName = sc.nextLine();
             System.out.print("New Price: ");
-            int newPrice=sc.nextInt();
+            int newPrice = sc.nextInt();
             sc.nextLine();
             Iname.set(indexOFremove, newName);
             iPrice.set(indexOFremove, newPrice);
             System.out.println(Iname);
             System.out.println(iPrice);
-        }
-        else{
+        } else {
             System.out.println("Item Not Present in the List.");
         }
     }
 
+}
+
+class caseSwitch extends Recipeses {
+    void caseState() {
+        addingValue(false);
+        System.out.println("Press 1: To Remove Item From the List\nPress 2: To Update the Ingrident From the List");
+        int press = sc.nextInt();
+        sc.nextLine();
+        switch (press) {
+            case 1:
+                removeRecipe();
+                break;
+            case 2:
+                updateIngrident();
+                break;
+            default:
+                System.out.println("Invalid Press");
+                break;
+        }
+    }
 }
 
 public class Ingredient {
