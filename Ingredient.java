@@ -10,9 +10,7 @@ class Recipe {
     ArrayList<Integer> iPrice = new ArrayList<>();
     Scanner sc = new Scanner(System.in);
 
-    void addingValue(ArrayList<String> Sname, ArrayList<Integer> Sprice) {
-        this.Iname = Sname;
-        this.iPrice = Sprice;
+    void addingValue() {
         System.out.println("Press Enter to Stop Adding Value in The List");
         System.out.println("Add Ingredient Name");
         System.out.print("Ingredient: ");
@@ -20,14 +18,13 @@ class Recipe {
         if (name.equals("")) {
             return;
         } else {
-            Sname.add(name);
+            Iname.add(name);
             System.out.print("Price: ");
             int price = sc.nextInt();
-            Sprice.add(price);
-            addingValue(Sname, Sprice);
+            sc.nextLine();
+            iPrice.add(price);
+            addingValue();
         }
-        System.out.println(Sname);
-        System.out.println(Sprice);
     }
 
     ArrayList<String> setName() {
@@ -42,6 +39,8 @@ class Recipe {
 public class Ingredient {
     public static void main(String[] args) {
         Recipe ob = new Recipe();
-        ob.addingValue(ob.setName(),ob.setPrice());
+        ob.addingValue();
+        System.out.println(ob.setName());
+        System.out.println(ob.setPrice());
     }
 }
