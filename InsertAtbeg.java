@@ -11,7 +11,7 @@ class Node {
     }
 }
 
-public class InsertAtBeg {
+public class InsertAtbeg {
 
     public static void main(String[] args) {
         Node a=new Node(12);
