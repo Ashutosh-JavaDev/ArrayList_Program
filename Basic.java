@@ -28,5 +28,8 @@ class inserting {
 }
 
 public class Basic {
-
+    public static void main(String[] args) {
+        inserting ob=new inserting();
+        ob.insert();
+    }
 }
