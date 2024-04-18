@@ -1,0 +1,8 @@
+package ArrayList_Program;
+
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class Basic {
+
+}
