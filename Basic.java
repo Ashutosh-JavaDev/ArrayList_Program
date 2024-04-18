@@ -26,7 +26,7 @@ class inserting {
         }
         System.out.println("Enter the Index want to remove:");
         int ind = sc.nextInt();
-        list.remove(ind);
+        list.remove(ind-1);
         System.out.println("Existing Numbers are:");
         for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
