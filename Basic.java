@@ -18,7 +18,9 @@ class inserting {
                 list.add(num);
             }
             continue;
+
         }
+        System.out.println("Numbers are:");
         for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
         }
