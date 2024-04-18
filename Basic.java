@@ -2,10 +2,12 @@ package ArrayList_Program;
 
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Collection;
 
 class inserting {
     public void insert() {
         Scanner sc = new Scanner(System.in);
+        ArrayList list = new ArrayList<>();
         System.out.println("Enter number or write 'STOP' to stop adding number");
         while (true) {
             String number = sc.nextLine();
@@ -13,7 +15,9 @@ class inserting {
                 break;
             } else {
                 float num = Float.parseFloat(number);
+                list.add(num);
             }
+            continue;
         }
     }
 }
