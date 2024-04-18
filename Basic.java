@@ -11,7 +11,7 @@ class inserting {
         System.out.println("Enter number or write 'STOP' to stop adding number");
         while (true) {
             String number = sc.nextLine();
-            if (number.equalsIgnoreCase("STOP")) {
+            if (number.equalsIgnoreCase("STOP")||number.equals(" ")) {
                 break;
             } else {
                 int num = Integer.parseInt(number);
