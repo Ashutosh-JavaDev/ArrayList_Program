@@ -8,10 +8,10 @@ class inserting {
     public void insert() {
         Scanner sc = new Scanner(System.in);
         ArrayList list = new ArrayList<>();
-        System.out.println("Enter number or write 'STOP' to stop adding number");
+        System.out.println("Enter number or Press Double time 'ENTER' to stop adding number");
         while (true) {
             String number = sc.nextLine();
-            if (number.equalsIgnoreCase("STOP")||number.equals(" ")) {
+            if (number.equals("")) {
                 break;
             } else {
                 int num = Integer.parseInt(number);
