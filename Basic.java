@@ -26,13 +26,20 @@ class inserting {
         }
         System.out.println("Enter the Index want to remove:");
         int ind = sc.nextInt();
-        list.remove(ind-1);
+        list.remove(ind - 1);
         System.out.println("Existing Numbers are:");
         for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
         }
         System.out.println("Enter the Number want to find:");
-        int find=sc.nextInt();
+        int find = sc.nextInt();
+        if (list.contains(find)){
+            System.out.println(true);
+        }
+        else{
+            System.out.println(false);
+        }
+
     }
 }
 
