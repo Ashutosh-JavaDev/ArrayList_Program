@@ -40,7 +40,9 @@ class inserting {
             System.out.println(false);
         }
         System.out.println("Reverse List:");
-        
+        for(int i=list.size()-1;i>=0;i--){
+            
+        }
     }
 }
 
