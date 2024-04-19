@@ -2,7 +2,7 @@ package ArrayList_Program;
 
 import java.util.Scanner;
 import java.util.ArrayList;
-import java.util.Collection;
+import java.util.Collections;
 
 class inserting {
     public void insert() {
@@ -43,6 +43,7 @@ class inserting {
         for(int i=list.size()-1;i>=0;i--){
            System.out.println(list.get(i)); 
         }
+        Collections.shuffle(list);
     }
 }
 
