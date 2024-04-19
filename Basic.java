@@ -44,6 +44,8 @@ class inserting {
            System.out.println(list.get(i)); 
         }
         Collections.shuffle(list);
+        System.out.println(list);
+        
     }
 }
 
