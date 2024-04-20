@@ -47,11 +47,11 @@ class inserting {
         System.out.println(list);
         int sum=0;
         for(int i=0;i<list.size();i++){
-          sum=sum+i;  
+          sum+=list.get(i);  
         }
     }
 }
-
+    
 public class Basic {
     public static void main(String[] args) {
         inserting ob = new inserting();
