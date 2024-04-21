@@ -22,7 +22,6 @@ class Inserting {
                 }
             }
         }
-       
 
         int sum = 0;
         for (int i = 0; i < list.size(); i++) {
@@ -30,15 +29,16 @@ class Inserting {
         }
         System.out.println("Sum of numbers: " + sum);
 
-        int mul=1;
-        for(int i=0;i<list.size();i++){
-            mul*=list.get(i);
+        int mul = 1;
+        for (int i = 0; i < list.size(); i++) {
+            mul *= list.get(i);
         }
-        
+
         System.out.println("Numbers in the list:");
         for (int num : list) {
             System.out.println(num);
         }
+        System.out.println("Product of List: " + mul);
 
         if (!list.isEmpty()) {
             System.out.println("Enter the index of the number you want to remove:");
@@ -52,17 +52,17 @@ class Inserting {
             } else {
                 System.out.println("Invalid index.");
             }
-            
+
             System.out.println("Enter the number you want to find:");
             int find = sc.nextInt();
             System.out.println("List contains " + find + ": " + list.contains(find));
-            
+
             System.out.println("Reversed List:");
             Collections.reverse(list);
             for (int num : list) {
                 System.out.println(num);
             }
-            
+
             System.out.println("Shuffled List:");
             Collections.shuffle(list);
             System.out.println(list);
