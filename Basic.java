@@ -14,16 +14,20 @@ class inserting {
             if (number.equals("")) {
                 break;
             } else {
-                int num = Integer.parseInt(number);
-                list.add(num);
+                try {
+                    int num = Integer.parseInt(number);
+                    list.add(num);
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid input. Please enter a valid integer.");
+                }
             }
-            continue;
 
         }
         int sum=0;
         for(int i=0;i<list.size();i++){
-            
+            sum=sum+list.get(i);
         }
+        System.out.println(sum);
         System.out.println("Numbers are:");
         for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
