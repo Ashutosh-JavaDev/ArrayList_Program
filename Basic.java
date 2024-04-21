@@ -29,6 +29,11 @@ class Inserting {
             sum += list.get(i);
         }
         System.out.println("Sum of numbers: " + sum);
+
+        int mul=1;
+        for(int i=0;i<list.size();i++){
+
+        }
         
         System.out.println("Numbers in the list:");
         for (int num : list) {
