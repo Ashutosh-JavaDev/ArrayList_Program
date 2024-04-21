@@ -20,7 +20,10 @@ class inserting {
             continue;
 
         }
-   
+        int sum=0;
+        for(int i=0;i<list.size();i++){
+            
+        }
         System.out.println("Numbers are:");
         for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
