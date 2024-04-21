@@ -22,7 +22,7 @@ class Inserting {
                 }
             }
         }
-        sc.close(); // Close the Scanner to prevent resource leak
+       
 
         int sum = 0;
         for (int i = 0; i < list.size(); i++) {
