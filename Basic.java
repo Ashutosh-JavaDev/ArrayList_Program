@@ -32,7 +32,7 @@ class Inserting {
 
         int mul=1;
         for(int i=0;i<list.size();i++){
-
+            mul*=list.get(i);
         }
         
         System.out.println("Numbers in the list:");
