@@ -9,6 +9,7 @@ class AddData{
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the Name of the Student\nor Press Enter to Exit");
         while(true){
+            System.out.println("Add Name: ");
             String name=sc.nextLine();
             if(name.equals("")){
                 break;
@@ -20,6 +21,7 @@ class AddData{
         for(int i=0;i<Name.size();i++){
             System.out.print(Name);
         }
+        System.out.println();
     }
 }
 public class StudentDatabase {
