@@ -23,6 +23,9 @@ class AddData{
     }
 }
 public class StudentDatabase {
-
+public static void main(String[]args){
+    AddData ob=new AddData();
+    ob.addData();
+}
     
 }
