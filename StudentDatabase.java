@@ -1,6 +1,7 @@
 package ArrayList_Program;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 class AddData {
@@ -18,7 +19,13 @@ class AddData {
                 break;
             } else {
                 Name.add(name);
+                System.out.print("Class:");
+                try{
 
+                }
+                catch(InputMismatchException e){
+                   e.printStackTrace();  
+                }
             }
         }
         System.out.print(Name);
