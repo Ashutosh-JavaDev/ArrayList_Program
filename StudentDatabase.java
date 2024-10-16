@@ -7,7 +7,7 @@ import java.util.Scanner;
 class AddData {
     public void addData() {
         ArrayList<String> Name = new ArrayList<>();
-        ArrayList<Integer> Class = new ArrayList<>();
+        ArrayList<Integer> Age = new ArrayList<>();
         ArrayList<Integer> Marks = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the Name of the Student\nor Press Enter to Exit");
@@ -19,16 +19,16 @@ class AddData {
                 break;
             } else {
                 Name.add(name);
-                System.out.print("Class: ");
+                System.out.println("Class: ");
                 try{
                     int clasS=sc.nextInt();
-                    Class.add(clasS);
+                    Age.add(clasS);
                     sc.nextLine();
                 }
                 catch(InputMismatchException e){
                    e.printStackTrace();  
                 }
-                System.out.print("Marks: ");
+                System.out.println("Marks: ");
                 try{
                     int marks=sc.nextInt();
                     Marks.add(marks);
@@ -40,9 +40,12 @@ class AddData {
                 
             }
         }
-        System.out.print(Name);
-        System.out.print(Class);
-        System.out.print(Marks);
+        System.out.println("--------------------------------------------------------------");
+        for(int i=0;i<Name.size();i++){
+            System.out.println("Student"+ (i+1)+": ");
+
+            System.out.println("Student Name: "+Name.get(i)+"\nStudent Class: "+Age.get(i)+"\nStudent Marks: "+Marks.get(i));
+        }
 
         System.out.println();
     }
