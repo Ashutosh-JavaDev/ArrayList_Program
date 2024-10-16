@@ -19,7 +19,7 @@ class AddData {
                 break;
             } else {
                 Name.add(name);
-                System.out.println("Class: ");
+                System.out.println("Age: ");
                 try {
                     int clasS = sc.nextInt();
                     Age.add(clasS);
@@ -43,7 +43,7 @@ class AddData {
             System.out.println("Student" + (i + 1) + ": ");
 
             System.out.println("Student Name: " + Name.get(i) + "\nStudent Class: " + Age.get(i) + "\nStudent Marks: "
-                    + Marks.get(i));
+                    + Marks.get(i)+"\n----------------------------");
         }
 
         System.out.println();
