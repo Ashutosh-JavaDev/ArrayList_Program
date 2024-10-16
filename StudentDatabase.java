@@ -20,31 +20,30 @@ class AddData {
             } else {
                 Name.add(name);
                 System.out.println("Class: ");
-                try{
-                    int clasS=sc.nextInt();
+                try {
+                    int clasS = sc.nextInt();
                     Age.add(clasS);
                     sc.nextLine();
-                }
-                catch(InputMismatchException e){
-                   e.printStackTrace();  
+                } catch (InputMismatchException e) {
+                    e.printStackTrace();
                 }
                 System.out.println("Marks: ");
-                try{
-                    int marks=sc.nextInt();
+                try {
+                    int marks = sc.nextInt();
                     Marks.add(marks);
                     sc.nextLine();
+                } catch (InputMismatchException e) {
+                    e.printStackTrace();
                 }
-                catch(InputMismatchException e){
-                   e.printStackTrace();  
-                }
-                
+
             }
         }
         System.out.println("--------------------------------------------------------------");
-        for(int i=0;i<Name.size();i++){
-            System.out.println("Student"+ (i+1)+": ");
+        for (int i = 0; i < Name.size(); i++) {
+            System.out.println("Student" + (i + 1) + ": ");
 
-            System.out.println("Student Name: "+Name.get(i)+"\nStudent Class: "+Age.get(i)+"\nStudent Marks: "+Marks.get(i));
+            System.out.println("Student Name: " + Name.get(i) + "\nStudent Class: " + Age.get(i) + "\nStudent Marks: "
+                    + Marks.get(i));
         }
 
         System.out.println();
