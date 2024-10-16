@@ -1,31 +1,33 @@
 package ArrayList_Program;
+
 import java.util.ArrayList;
 import java.util.Scanner;
-class AddData{
-    public void addData(){
-        ArrayList<String>Name=new ArrayList<>();
-        ArrayList<Integer>Class=new ArrayList<>();
-        ArrayList<Integer>Marks=new ArrayList<>();
-        Scanner sc=new Scanner(System.in);
+
+class AddData {
+    public void addData() {
+        ArrayList<String> Name = new ArrayList<>();
+        ArrayList<Integer> Class = new ArrayList<>();
+        ArrayList<Integer> Marks = new ArrayList<>();
+        Scanner sc = new Scanner(System.in);
         System.out.println("Enter the Name of the Student\nor Press Enter to Exit");
-        while(true){
+        while (true) {
             System.out.println("Add Name: ");
-            String name=sc.nextLine();
-            if(name.equals("")){
+            String name = sc.nextLine();
+            if (name.equals("")) {
                 break;
-            }
-            else{
+            } else {
                 Name.add(name);
             }
         }
-      System.out.print(Name);
+        System.out.print(Name);
         System.out.println();
     }
 }
+
 public class StudentDatabase {
-public static void main(String[]args){
-    AddData ob=new AddData();
-    ob.addData();
-}
-    
+    public static void main(String[] args) {
+        AddData ob = new AddData();
+        ob.addData();
+    }
+
 }
