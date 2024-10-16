@@ -10,6 +10,7 @@ class AddData {
         ArrayList<Integer> Marks = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the Name of the Student\nor Press Enter to Exit");
+        System.out.println("Add Student Detail: ");
         while (true) {
             System.out.println("Add Name: ");
             String name = sc.nextLine();
@@ -17,6 +18,7 @@ class AddData {
                 break;
             } else {
                 Name.add(name);
+
             }
         }
         System.out.print(Name);
