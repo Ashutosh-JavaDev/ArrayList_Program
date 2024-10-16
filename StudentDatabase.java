@@ -41,6 +41,9 @@ class AddData {
             }
         }
         System.out.print(Name);
+        System.out.print(Class);
+        System.out.print(Marks);
+
         System.out.println();
     }
 }
