@@ -10,6 +10,12 @@ class AddData{
         System.out.println("Enter the Name of the Student\nor Press Enter to Exit");
         while(true){
             String name=sc.nextLine();
+            if(name.equals("")){
+                break;
+            }
+            else{
+                Name.add(name);
+            }
         }
     }
 }
