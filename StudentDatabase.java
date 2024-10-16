@@ -28,6 +28,16 @@ class AddData {
                 catch(InputMismatchException e){
                    e.printStackTrace();  
                 }
+                System.out.print("Marks: ");
+                try{
+                    int marks=sc.nextInt();
+                    Marks.add(marks);
+                    sc.nextLine();
+                }
+                catch(InputMismatchException e){
+                   e.printStackTrace();  
+                }
+                
             }
         }
         System.out.print(Name);
