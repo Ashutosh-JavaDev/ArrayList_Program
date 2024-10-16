@@ -17,6 +17,9 @@ class AddData{
                 Name.add(name);
             }
         }
+        for(int i=0;i<Name.size();i++){
+            System.out.print(Name);
+        }
     }
 }
 public class StudentDatabase {
