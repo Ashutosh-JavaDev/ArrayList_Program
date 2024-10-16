@@ -7,6 +7,10 @@ class AddData{
         ArrayList<Integer>Class=new ArrayList<>();
         ArrayList<Integer>Marks=new ArrayList<>();
         Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the Name of the Student\nor Press Enter to Exit");
+        while(true){
+            String name=sc.nextLine();
+        }
     }
 }
 public class StudentDatabase {
