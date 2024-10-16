@@ -19,9 +19,11 @@ class AddData {
                 break;
             } else {
                 Name.add(name);
-                System.out.print("Class:");
+                System.out.print("Class: ");
                 try{
-
+                    int clasS=sc.nextInt();
+                    Class.add(clasS);
+                    sc.nextLine();
                 }
                 catch(InputMismatchException e){
                    e.printStackTrace();  
