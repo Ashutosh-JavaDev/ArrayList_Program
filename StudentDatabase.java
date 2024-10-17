@@ -8,7 +8,7 @@ class AddData {
     public void addData() {
         ArrayList<String> Name = new ArrayList<>();
         ArrayList<Integer> Age = new ArrayList<>();
-        ArrayList<Integer> Marks = new ArrayList<>();
+        ArrayList<ArrayList<Integer>> Marks = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the Name of the Student\nor Press Enter to Exit");
         System.out.println("Add Student Detail: ");
@@ -28,10 +28,21 @@ class AddData {
                     e.printStackTrace();
                 }
             }
+            ArrayList<Integer>mark=new ArrayList<>();
+            System.out.println("Enter Marks of 5 Subjects");
             for (int i = 0; i < 5; i++) {
-                int marks = sc.nextInt();
-                Marks.add(marks);
+               try{
+                int marks=sc.nextInt();
+                mark.add(marks);
+               }
+               catch(InputMismatchException e){
+                System.out.println("Invalid Input, print marks in the Subject");
+                sc.nextLine();
+                i--;
+               }
             }
+            Marks.add(mark);
+            sc.nextLine();
         }
         System.out.println("--------------------------------------------------------------");
         for (int i = 0; i < Name.size(); i++) {
@@ -42,6 +53,7 @@ class AddData {
         }
 
         System.out.println();
+    
     }
 }
 
