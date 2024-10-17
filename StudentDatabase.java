@@ -5,10 +5,12 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 class AddData {
+    ArrayList<String> Name = new ArrayList<>();
+    ArrayList<Integer> Age = new ArrayList<>();
+    ArrayList<ArrayList<Integer>> Marks = new ArrayList<>();
+
     public void addData() {
-        ArrayList<String> Name = new ArrayList<>();
-        ArrayList<Integer> Age = new ArrayList<>();
-        ArrayList<ArrayList<Integer>> Marks = new ArrayList<>();
+
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the Name of the Student\nor Press Enter to Exit");
         System.out.println("Add Student Detail: ");
@@ -43,6 +45,12 @@ class AddData {
             Marks.add(mark);
             sc.nextLine();
         }
+
+    }
+}
+
+class Display extends AddData {
+    void display() {
         System.out.println(
                 "Name\tAge\tMath\tEng\tIT\tOS\tDS\n--------------------------------------------------------------");
         for (int i = 0; i < Name.size(); i++) {
@@ -53,7 +61,6 @@ class AddData {
         }
 
         System.out.println();
-
     }
 }
 
