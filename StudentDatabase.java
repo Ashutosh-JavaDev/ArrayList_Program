@@ -28,14 +28,17 @@ class AddData {
                     e.printStackTrace();
                 }
             }
-
+            for (int i = 0; i < 5; i++) {
+                int marks = sc.nextInt();
+                Marks.add(marks);
+            }
         }
         System.out.println("--------------------------------------------------------------");
         for (int i = 0; i < Name.size(); i++) {
             System.out.println("Student" + (i + 1) + ": ");
 
             System.out.println("Student Name: " + Name.get(i) + "\nStudent Class: " + Age.get(i) + "\nStudent Marks: "
-                    + Marks.get(i)+"\n----------------------------");
+                    + Marks.get(i) + "\n----------------------------");
         }
 
         System.out.println();
