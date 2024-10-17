@@ -44,9 +44,9 @@ class AddData {
             sc.nextLine();
         }
         System.out.println(
-                "\t\tName\tAge\tMath\tEng\tIT\tOS\tDS\n--------------------------------------------------------------");
+                "Name\tAge\tMath\tEng\tIT\tOS\tDS\n--------------------------------------------------------------");
         for (int i = 0; i < Name.size(); i++) {
-            System.out.println("Student" + (i + 1) + ": ");
+            System.out.println("Student" + (i + 1) + ":..................................... ");
 
             System.out.println("Name: " + Name.get(i) + "\nAge: " + Age.get(i) + "\nMarks: "
                     + Marks.get(i) + "\n----------------------------");
