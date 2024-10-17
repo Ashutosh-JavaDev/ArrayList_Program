@@ -28,23 +28,23 @@ class AddData {
                     e.printStackTrace();
                 }
             }
-            ArrayList<Integer>mark=new ArrayList<>();
+            ArrayList<Integer> mark = new ArrayList<>();
             System.out.println("Enter Marks of 5 Subjects");
             for (int i = 0; i < 5; i++) {
-               try{
-                int marks=sc.nextInt();
-                mark.add(marks);
-               }
-               catch(InputMismatchException e){
-                System.out.println("Invalid Input, print marks in the Subject");
-                sc.nextLine();
-                i--;
-               }
+                try {
+                    int marks = sc.nextInt();
+                    mark.add(marks);
+                } catch (InputMismatchException e) {
+                    System.out.println("Invalid Input, print marks in the Subject");
+                    sc.nextLine();
+                    i--;
+                }
             }
             Marks.add(mark);
             sc.nextLine();
         }
-        System.out.println("\t\tName\tAge\tMath\tEng\tIT\tOS\tDS\n--------------------------------------------------------------");
+        System.out.println(
+                "\t\tName\tAge\tMath\tEng\tIT\tOS\tDS\n--------------------------------------------------------------");
         for (int i = 0; i < Name.size(); i++) {
             System.out.println("Student" + (i + 1) + ": ");
 
@@ -53,7 +53,7 @@ class AddData {
         }
 
         System.out.println();
-    
+
     }
 }
 
