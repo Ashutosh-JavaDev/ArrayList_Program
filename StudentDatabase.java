@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-class Student {
+class student {
     ArrayList<String> Name = new ArrayList<>();
     ArrayList<Integer> Age = new ArrayList<>();
     ArrayList<ArrayList<Integer>> Marks = new ArrayList<>();
@@ -48,11 +48,14 @@ class Student {
         }
        display();
     }
+    void update(){
+        
+    }
     void display() {
         System.out.println(
                 "Name\tAge\tMath\tEng\tIT\tOS\tDS\n--------------------------------------------------------------");
         for (int i = 0; i < Name.size(); i++) {
-            System.out.println("Student" + (i + 1) + ":..................................... ");
+            System.out.println("\t\tStudent" + (i + 1) + "");
 
             System.out.println("Name: " + Name.get(i) + "\nAge: " + Age.get(i) + "\nMarks: "
                     + Marks.get(i) + "\n----------------------------");
@@ -60,6 +63,7 @@ class Student {
 
         System.out.println();
     }
+    
 }
 
 
@@ -67,7 +71,7 @@ class Student {
 
 public class StudentDatabase {
     public static void main(String[] args) {
-        Student ob = new Student();
+        student ob = new student();
         ob.addData();
     }
 
