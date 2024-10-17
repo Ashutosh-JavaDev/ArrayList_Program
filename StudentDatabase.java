@@ -8,10 +8,10 @@ class student {
     ArrayList<String> Name = new ArrayList<>();
     ArrayList<Integer> Age = new ArrayList<>();
     ArrayList<ArrayList<Integer>> Marks = new ArrayList<>();
+    Scanner sc = new Scanner(System.in);
 
     public void addData() {
 
-        Scanner sc = new Scanner(System.in);
         System.out.println("Enter the Name of the Student\nor Press Enter to Exit");
         System.out.println("Add Student Detail: ");
         while (true) {
@@ -46,14 +46,18 @@ class student {
             Marks.add(mark);
             sc.nextLine();
         }
-       display();
+        display();
     }
-    void update(){
+
+    void update() {
         System.out.println("Press 1: To Update Name\nPress 2:To Update Age\nPress 3: To Upadate Marks");
+        int Press = sc.nextInt();
     }
-    void remove(){
+
+    void remove() {
 
     }
+
     void display() {
         System.out.println(
                 "Name\tAge\tMath\tEng\tIT\tOS\tDS\n--------------------------------------------------------------");
@@ -66,11 +70,8 @@ class student {
 
         System.out.println();
     }
-    
+
 }
-
-
-
 
 public class StudentDatabase {
     public static void main(String[] args) {
