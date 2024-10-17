@@ -49,6 +49,9 @@ class student {
        display();
     }
     void update(){
+
+    }
+    void remove(){
         
     }
     void display() {
