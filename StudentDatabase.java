@@ -27,16 +27,8 @@ class AddData {
                 } catch (InputMismatchException e) {
                     e.printStackTrace();
                 }
-                System.out.println("Marks: ");
-                try {
-                    int marks = sc.nextInt();
-                    Marks.add(marks);
-                    sc.nextLine();
-                } catch (InputMismatchException e) {
-                    e.printStackTrace();
-                }
-
             }
+
         }
         System.out.println("--------------------------------------------------------------");
         for (int i = 0; i < Name.size(); i++) {
