@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-class AddData {
+class Student {
     ArrayList<String> Name = new ArrayList<>();
     ArrayList<Integer> Age = new ArrayList<>();
     ArrayList<ArrayList<Integer>> Marks = new ArrayList<>();
@@ -46,33 +46,28 @@ class AddData {
             Marks.add(mark);
             sc.nextLine();
         }
-        Display disp = new Display();
-        disp.display();
+       display();
     }
-}
-
-class Display extends AddData {
-    public void display() {
+    void display() {
         System.out.println(
                 "Name\tAge\tMath\tEng\tIT\tOS\tDS\n--------------------------------------------------------------");
         for (int i = 0; i < Name.size(); i++) {
-            System.out.println("Student" + (i + 1) + ": ..................................... ");
-            System.out.println("Name: " + Name.get(i));
-            System.out.println("Age: " + Age.get(i));
-            System.out.print("Marks: ");
+            System.out.println("Student" + (i + 1) + ":..................................... ");
 
-            // Print marks for 5 subjects
-            for (int mark : Marks.get(i)) {
-                System.out.print(mark + "\t");
-            }
-            System.out.println("\n----------------------------");
+            System.out.println("Name: " + Name.get(i) + "\nAge: " + Age.get(i) + "\nMarks: "
+                    + Marks.get(i) + "\n----------------------------");
         }
+
+        System.out.println();
     }
 }
 
+
+
+
 public class StudentDatabase {
     public static void main(String[] args) {
-        AddData ob = new AddData();
+        Student ob = new Student();
         ob.addData();
     }
 
