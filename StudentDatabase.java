@@ -49,10 +49,10 @@ class student {
        display();
     }
     void update(){
-
+        System.out.println("Press 1: To Update Name\nPress 2:To Update Age\nPress 3: To Upadate Marks");
     }
     void remove(){
-        
+
     }
     void display() {
         System.out.println(
