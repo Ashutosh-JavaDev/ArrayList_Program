@@ -89,10 +89,10 @@ class student {
     // Age
     void age() {
         System.out.print("Enter the Roll Number Of Student: ");
-        int age = sc.nextInt();
+        int roll = sc.nextInt();
         int count = 0;
-        for (int i = 0; i < Age.size(); i++) {
-            if (Roll.get(i) == age) {
+        for (int i = 0; i < Roll.size(); i++) {
+            if (Roll.get(i) == roll) {
                 count++;
                 break;
             }
@@ -100,7 +100,7 @@ class student {
         if(count>0){
             System.out.println("Enter the Updated Age for the Student");
             int newAge=sc.nextInt();
-            Age.set(age, newAge);
+            Age.set(roll, newAge);
         }
     }
 
