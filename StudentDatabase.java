@@ -64,7 +64,8 @@ class student {
         int Press = sc.nextInt();
         switch (Press) {
             case 1:
-
+            name();
+            break;
         }
     }
 
