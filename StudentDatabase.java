@@ -60,7 +60,7 @@ class student {
 
     // Update
     void update() {
-        System.out.println("Press 1: To Update Name\nPress 2:To Update Age\nPress 3: To Upadate Marks");
+        System.out.println("Press 1: To Update Name\nPress 2:To Update Age\nPress 3: To Upadate Roll");
         int Press = sc.nextInt();
         switch (Press) {
             case 1:
@@ -71,6 +71,9 @@ class student {
                 break;
             case 3:
                 roll();
+                break;
+            default:
+                System.out.println("Choose Case Wisely");
                 break;
         }
     }
