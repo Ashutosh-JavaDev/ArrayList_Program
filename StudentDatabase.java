@@ -7,7 +7,7 @@ import java.util.Scanner;
 class student {
     ArrayList<String> Name = new ArrayList<>();
     ArrayList<Integer> Age = new ArrayList<>();
-    ArrayList<Integer>Roll=new ArrayList<>();
+    ArrayList<Integer> Roll = new ArrayList<>();
     ArrayList<ArrayList<Integer>> Marks = new ArrayList<>();
     Scanner sc = new Scanner(System.in);
 
@@ -57,29 +57,31 @@ class student {
         }
         display();
     }
-// Update
+
+    // Update
     void update() {
         System.out.println("Press 1: To Update Name\nPress 2:To Update Age\nPress 3: To Upadate Marks");
         int Press = sc.nextInt();
-        switch(Press){
+        switch (Press) {
             case 1:
-           
 
         }
     }
+
     // Name
-    void name(){
+    void name() {
         System.out.print("Enter the Roll Number Of Student: ");
-        int roll=sc.nextInt();
-        int count=0;
-       for(int i=1;i<=Roll.size();i++){
-        if(Roll.get(i)==roll){
-            count++;
-            break;
+        int roll = sc.nextInt();
+        int count = 0;
+        for (int i = 1; i <= Roll.size(); i++) {
+            if (Roll.get(i) == roll) {
+                count++;
+                break;
+            }
         }
-       }
     }
-// 
+
+    //
     void remove() {
 
     }
@@ -90,7 +92,7 @@ class student {
         for (int i = 0; i < Name.size(); i++) {
             System.out.println("\t\tStudent" + (i + 1) + "");
 
-            System.out.println("Name: " + Name.get(i)+"\nRoll: "+Roll.get(i) + "\nAge: " + Age.get(i) +"\nMarks: "
+            System.out.println("Name: " + Name.get(i) + "\nRoll: " + Roll.get(i) + "\nAge: " + Age.get(i) + "\nMarks: "
                     + Marks.get(i) + "\n----------------------------");
         }
 
