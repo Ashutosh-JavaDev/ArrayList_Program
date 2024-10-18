@@ -30,6 +30,14 @@ class student {
                 } catch (InputMismatchException e) {
                     e.printStackTrace();
                 }
+                System.out.println("Roll: ");
+                try {
+                    int roll = sc.nextInt();
+                    Age.add(roll);
+                    sc.nextLine();
+                } catch (InputMismatchException e) {
+                    e.printStackTrace();
+                }
             }
             ArrayList<Integer> mark = new ArrayList<>();
             System.out.println("Enter Marks of 5 Subjects");
