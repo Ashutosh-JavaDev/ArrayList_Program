@@ -33,7 +33,7 @@ class student {
                 System.out.println("Roll: ");
                 try {
                     int roll = sc.nextInt();
-                    Age.add(roll);
+                    Roll.add(roll);
                     sc.nextLine();
                 } catch (InputMismatchException e) {
                     e.printStackTrace();
