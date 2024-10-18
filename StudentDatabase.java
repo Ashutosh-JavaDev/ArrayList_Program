@@ -79,6 +79,10 @@ class student {
                 break;
             }
         }
+        if(count>0){
+            System.out.println("Enter the New Name for the Student");
+            String newName=sc.nextLine();
+        }
     }
 
     //
