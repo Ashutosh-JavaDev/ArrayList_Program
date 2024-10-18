@@ -71,6 +71,9 @@ class student {
     void name(){
         System.out.print("Enter the Roll Number Of Student: ");
         int roll=sc.nextInt();
+       for(int i=0;i<Roll.size();i++){
+        
+       }
     }
 // 
     void remove() {
