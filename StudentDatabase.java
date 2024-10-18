@@ -7,6 +7,7 @@ import java.util.Scanner;
 class student {
     ArrayList<String> Name = new ArrayList<>();
     ArrayList<Integer> Age = new ArrayList<>();
+    ArrayList<Integer>Roll=new ArrayList<>();
     ArrayList<ArrayList<Integer>> Marks = new ArrayList<>();
     Scanner sc = new Scanner(System.in);
 
@@ -54,7 +55,7 @@ class student {
         int Press = sc.nextInt();
         switch(Press){
             case 1:
-            // 
+            System.out.println("");
         }
     }
 // 
