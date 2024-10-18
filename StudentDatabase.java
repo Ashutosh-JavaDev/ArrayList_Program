@@ -82,6 +82,7 @@ class student {
         if(count>0){
             System.out.println("Enter the New Name for the Student");
             String newName=sc.nextLine();
+            Name.set(roll, newName);
         }
     }
 
