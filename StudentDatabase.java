@@ -63,8 +63,14 @@ class student {
         int Press = sc.nextInt();
         switch(Press){
             case 1:
-            System.out.println("");
+           
+
         }
+    }
+    // Name
+    void name(){
+        System.out.print("Enter the Roll Number Of Student: ");
+        int roll=sc.nextInt();
     }
 // 
     void remove() {
