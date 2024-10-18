@@ -11,6 +11,30 @@ class student {
     ArrayList<ArrayList<Integer>> Marks = new ArrayList<>();
     Scanner sc = new Scanner(System.in);
 
+    void Choice() {
+        System.out.println("Press 1:For Add Data\nPress 2:For Update Record\nPress 3:For Delete Record");
+        int Press = sc.nextInt();
+        switch (Press) {
+            case 1:
+                addData();
+                break;
+            case 2:
+                update();
+                break;
+            case 3:
+                remove();
+                break;
+            case 4:
+                display();
+                break;
+            default:
+                System.out.println("Choose Wisely");
+                break;
+
+        }
+
+    }
+
     public void addData() {
 
         System.out.println("Enter the Name of the Student\nor Press Enter to Exit");
