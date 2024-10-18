@@ -66,6 +66,12 @@ class student {
             case 1:
                 name();
                 break;
+            case 2:
+                age();
+                break;
+            case 3:
+                roll();
+                break;
         }
     }
 
@@ -104,6 +110,7 @@ class student {
             Age.set(roll, newAge);
         }
     }
+
     // Roll
     void roll() {
         System.out.print("Enter the Roll Number Of Student: ");
@@ -115,12 +122,13 @@ class student {
                 break;
             }
         }
-        if(count>0){
+        if (count > 0) {
             System.out.println("Enter the Updated Roll for the Student");
-            int newRoll=sc.nextInt();
+            int newRoll = sc.nextInt();
             Roll.set(roll, newRoll);
         }
     }
+
     //
     void remove() {
 
