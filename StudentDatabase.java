@@ -86,6 +86,24 @@ class student {
             Name.set(roll, newName);
         }
     }
+    // Age
+    void age() {
+        System.out.print("Enter the Roll Number Of Student: ");
+        int roll = sc.nextInt();
+        int count = 0;
+        for (int i = 1; i <= Roll.size(); i++) {
+            if (Roll.get(i) == roll) {
+                count++;
+                break;
+            }
+        }
+        if(count>0){
+            System.out.println("Enter the Updated Age for the Student");
+            int newAge=sc.nextInt();
+            Age.set(roll, newAge);
+        }
+    }
+
 
     //
     void remove() {
