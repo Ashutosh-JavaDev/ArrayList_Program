@@ -64,8 +64,8 @@ class student {
         int Press = sc.nextInt();
         switch (Press) {
             case 1:
-            name();
-            break;
+                name();
+                break;
         }
     }
 
@@ -80,14 +80,32 @@ class student {
                 break;
             }
         }
-        if(count>0){
+        if (count > 0) {
             System.out.println("Enter the New Name for the Student");
-            String newName=sc.nextLine();
+            String newName = sc.nextLine();
             Name.set(roll, newName);
         }
     }
+
     // Age
     void age() {
+        System.out.print("Enter the Roll Number Of Student: ");
+        int roll = sc.nextInt();
+        int count = 0;
+        for (int i = 0; i < Roll.size(); i++) {
+            if (Roll.get(i) == roll) {
+                count++;
+                break;
+            }
+        }
+        if (count > 0) {
+            System.out.println("Enter the Updated Age for the Student");
+            int newAge = sc.nextInt();
+            Age.set(roll, newAge);
+        }
+    }
+    // Roll
+    void roll() {
         System.out.print("Enter the Roll Number Of Student: ");
         int roll = sc.nextInt();
         int count = 0;
@@ -103,8 +121,6 @@ class student {
             Age.set(roll, newAge);
         }
     }
-
-
     //
     void remove() {
 
