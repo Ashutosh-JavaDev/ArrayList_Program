@@ -116,9 +116,9 @@ class student {
             }
         }
         if(count>0){
-            System.out.println("Enter the Updated Age for the Student");
-            int newAge=sc.nextInt();
-            Age.set(roll, newAge);
+            System.out.println("Enter the Updated Roll for the Student");
+            int newRoll=sc.nextInt();
+            Roll.set(roll, newRoll);
         }
     }
     //
