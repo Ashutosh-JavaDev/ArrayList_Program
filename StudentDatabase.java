@@ -77,7 +77,7 @@ class student {
         for (int i = 0; i < Name.size(); i++) {
             System.out.println("\t\tStudent" + (i + 1) + "");
 
-            System.out.println("Name: " + Name.get(i) + "\nAge: " + Age.get(i) + "\nMarks: "
+            System.out.println("Name: " + Name.get(i)+"\nRoll: "+Roll.get(i) + "\nAge: " + Age.get(i) +"\nMarks: "
                     + Marks.get(i) + "\n----------------------------");
         }
 
