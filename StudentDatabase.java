@@ -12,7 +12,7 @@ class student {
     Scanner sc = new Scanner(System.in);
 
     void Choice() {
-        System.out.println("Press 1:For Add Data\nPress 2:For Update Record\nPress 3:For Delete Record");
+        System.out.println("Press 1:For Add Data\nPress 2:For Update Record\nPress 3:For Delete Record\nPress 4:For  Display Record");
         int Press = sc.nextInt();
         switch (Press) {
             case 1:
