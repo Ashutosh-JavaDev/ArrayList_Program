@@ -14,6 +14,8 @@ class student {
     void Choice() {
         System.out.println("Press 1:For Add Data\nPress 2:For Update Record\nPress 3:For Delete Record\nPress 4:For Display Record");
         int Press = sc.nextInt();
+
+        sc.nextLine();
         switch (Press) {
             case 1:
                 addData();
