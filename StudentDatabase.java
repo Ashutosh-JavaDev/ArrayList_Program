@@ -143,19 +143,19 @@ class student {
 
     // Roll
     void roll() {
-        System.out.print("Enter the Roll Number Of Student: ");
-        int roll = sc.nextInt();
-        int count = 0;
-        for (int i = 0; i < Roll.size(); i++) {
-            if (Roll.get(i) == roll) {
-                count++;
+        System.out.print("Enter the Name of the Student whose detail want to update: ");
+        String name = sc.nextLine();
+        int count = -1;
+        for (int i = 0; i < Name.size(); i++) {
+            if (name.equalsIgnoreCase(Name.get(i))) {
+                count=i;
                 break;
             }
         }
         if (count > 0) {
             System.out.println("Enter the Updated Roll for the Student");
             int newRoll = sc.nextInt();
-            Roll.set(roll, newRoll);
+            Roll.set(count, newRoll);
         }
     }
 
