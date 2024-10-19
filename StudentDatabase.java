@@ -146,6 +146,7 @@ class student {
         System.out.print("Enter the Name of the Student whose detail want to update: ");
         String name = sc.nextLine();
         int count = -1;
+        sc.nextLine();
         for (int i = 0; i < Name.size(); i++) {
             if (name.equalsIgnoreCase(Name.get(i))) {
                 count=i;
