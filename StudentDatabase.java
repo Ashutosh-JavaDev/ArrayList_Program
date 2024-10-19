@@ -146,17 +146,20 @@ class student {
         System.out.print("Enter the Name of the Student whose detail want to update: ");
         String name = sc.nextLine();
         int count = -1;
-        sc.nextLine();
+        // sc.nextLine();
         for (int i = 0; i < Name.size(); i++) {
             if (name.equalsIgnoreCase(Name.get(i))) {
                 count=i;
                 break;
             }
         }
-        if (count > 0) {
+        if (count !=-1) {
             System.out.println("Enter the Updated Roll for the Student");
             int newRoll = sc.nextInt();
             Roll.set(count, newRoll);
+        }
+        else{
+            System.out.println("Student Not Found");
         }
     }
 
