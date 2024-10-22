@@ -87,7 +87,7 @@ class student {
     // Update
     void update() {
         addData();
-        System.out.println("Press 1: To Update Name\nPress 2: To Update Age\nPress 3: To Update Roll");
+        System.out.println("Press 1: To Update Name\nPress 2: To Update Age\nPress 3: To Update Roll\nPress 4: To Update Marks");
         int Press = sc.nextInt();
         switch (Press) {
             case 1:
@@ -98,6 +98,9 @@ class student {
                 break;
             case 3:
                 roll();
+                break;
+                case 4:
+                marks();
                 break;
             default:
                 System.out.println("Choose Case Wisely");
@@ -159,7 +162,7 @@ class student {
         }
     }
     // Marks
-    void Marks() {
+    void marks() {
         System.out.print("Enter the Name: ");
         String NamE = sc.nextLine();
         int index = -1;
