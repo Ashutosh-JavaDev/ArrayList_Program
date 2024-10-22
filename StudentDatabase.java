@@ -120,6 +120,8 @@ class student {
         System.out.print("Enter the Name: ");
         String NamE = sc.nextLine();
         int index = -1;
+        sc.nextLine();
+
         for (int i = 0; i < Name.size(); i++) {
 
             if (NamE.equalsIgnoreCase(Name.get(i))) {
@@ -138,6 +140,7 @@ class student {
         System.out.print("Enter the Name: ");
         String NamE = sc.nextLine();
         int index = -1;
+        sc.nextLine();
         for (int i = 0; i < Name.size(); i++) {
 
             if (NamE.equalsIgnoreCase(Name.get(i))) {
@@ -156,6 +159,8 @@ class student {
         System.out.print("Enter the Name: ");
         String NamE = sc.nextLine();
         int index = -1;
+        sc.nextLine();
+
         for (int i = 0; i < Name.size(); i++) {
 
             if (NamE.equalsIgnoreCase(Name.get(i))) {
@@ -174,6 +179,7 @@ class student {
         System.out.print("Enter the Name: ");
         String NamE = sc.nextLine();
         int index = -1;
+        sc.nextLine();
         for (int i = 0; i < Name.size(); i++) {
 
             if (NamE.equalsIgnoreCase(Name.get(i))) {
