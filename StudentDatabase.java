@@ -158,6 +158,23 @@ class student {
             Roll.set(index, newRoll);
         }
     }
+    // Marks
+    void Marks() {
+        System.out.print("Enter the Name: ");
+        String NamE = sc.nextLine();
+        int index = -1;
+        for (int i = 0; i < Name.size(); i++) {
+          
+            if(NamE.equalsIgnoreCase(Name.get(i))){
+                index=i;
+            }
+        }
+        if (index > -1) {
+           for(int i=0;i<5;i++){
+            
+           }
+        }
+    }
 
     //
     void remove() {
