@@ -137,7 +137,7 @@ class student {
         if (index > -1) {
             System.out.println("Enter the Update Age Student");
             int newAge = sc.nextInt();
-            Name.set(index, newAge);
+            Age.set(index, newAge);
         }
     }
 
