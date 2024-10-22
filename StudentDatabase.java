@@ -107,19 +107,19 @@ class student {
 
     // Name
     void name() {
-        System.out.print("Enter the Roll Number Of Student: ");
-        int roll = sc.nextInt();
-        int count = 0;
-        for (int i = 0; i < Roll.size(); i++) {
-            if (Roll.get(i) == roll) {
-                count++;
-                break;
+        System.out.print("Enter the Name: ");
+        String NamE = sc.nextLine();
+        int index = -1;
+        for (int i = 0; i < Name.size(); i++) {
+          
+            if(NamE.equalsIgnoreCase(Name.get(i))){
+                index=i;
             }
         }
-        if (count > 0) {
+        if (index > -1) {
             System.out.println("Enter the New Name for the Student");
             String newName = sc.nextLine();
-            Name.set(roll, newName);
+            Name.set(index, newName);
         }
     }
 
