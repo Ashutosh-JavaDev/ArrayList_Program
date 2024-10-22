@@ -16,23 +16,25 @@ class student {
                 "Press 1:For Add Data\nPress 2:For Update Record\nPress 3:For Delete Record\nPress 4:For Display Record");
         int Press = sc.nextInt();
         sc.nextLine();
-        switch (Press) {
-            case 1:
-                addData();
-                break;
-            case 2:
-                update();
-                break;
-            case 3:
-                remove();
-                break;
-            case 4:
-                display();
-                break;
-            default:
-                System.out.println("Choose Wisely");
-                break;
+        while (true) {
+            switch (Press) {
+                case 1:
+                    addData();
+                    break;
+                case 2:
+                    update();
+                    break;
+                case 3:
+                    remove();
+                    break;
+                case 4:
+                    display();
+                    break;
+                default:
+                    System.out.println("Choose Wisely");
+                    break;
 
+            }
         }
 
     }
