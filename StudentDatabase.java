@@ -93,15 +93,19 @@ class student {
         switch (Press) {
             case 1:
                 name();
+                display();
                 break;
             case 2:
                 age();
+                display();
                 break;
             case 3:
                 roll();
+                display();
                 break;
             case 4:
                 marks();
+                display();
                 break;
             default:
                 System.out.println("Choose Case Wisely");
