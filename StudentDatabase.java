@@ -150,6 +150,8 @@ class student {
         if (index > -1) {
             System.out.println("Enter the Update Age Student");
             int newAge = sc.nextInt();
+            sc.nextLine();
+
             Age.set(index, newAge);
         }
     }
@@ -170,6 +172,7 @@ class student {
         if (index > -1) {
             System.out.println("Enter the Updated Roll Number of Student");
             int newRoll = sc.nextInt();
+            sc.nextLine();
             Roll.set(index, newRoll);
         }
     }
