@@ -170,8 +170,11 @@ class student {
             }
         }
         if (index > -1) {
+            System.out.println("Enter the marks of 5 Subject");
            for(int i=0;i<5;i++){
-            
+            System.out.println("Subject "+(i+1));
+            int mark=sc.nextInt();
+            Marks.get(index).set(i, mark);
            }
         }
     }
